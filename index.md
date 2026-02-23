@@ -6,6 +6,12 @@ hero:
   name: "Cycling4hope"
   text: "A humanitarian cycling initiative from Oslo to Damascus supporting education and school rehabilitation projects in Syria."
   tagline: My great project tagline
+  hero:
+  image:
+    light: '/assets/Logo_Transparrent.png'
+    dark: '/assets/Logo_Transparrent_DarkMode.png'
+    alt: 'Website logo'
+
   actions:
     - theme: brand
       text: Markdown Examples
