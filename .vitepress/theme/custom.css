@@ -120,3 +120,224 @@
 .VPNavBarTitle {
   padding-block: 8px;
 }
+
+/* Homepage hero image: ~50% larger + same radius as feature cards */
+.VPHomeHero .image-container {
+  width: 480px !important;
+  height: 480px !important;
+  overflow: hidden;
+  border-radius: var(--c4h-radius);
+}
+
+.VPHomeHero .image-bg {
+  width: 288px !important;
+  height: 288px !important;
+  border-radius: var(--c4h-radius);
+}
+
+.VPHomeHero .image-src {
+  max-width: 288px !important;
+  max-height: 288px !important;
+  border-radius: var(--c4h-radius);
+}
+
+@media (min-width: 640px) {
+  .VPHomeHero .image-container {
+    width: 588px !important;
+    height: 588px !important;
+  }
+
+  .VPHomeHero .image-bg {
+    width: 384px !important;
+    height: 384px !important;
+  }
+
+  .VPHomeHero .image-src {
+    max-width: 384px !important;
+    max-height: 384px !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHomeHero .image-src {
+    max-width: 480px !important;
+    max-height: 480px !important;
+  }
+}
+
+/* Timeline page */
+.c4h-timeline-page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.c4h-timeline-hero {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.c4h-timeline-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: -0.03em;
+  color: var(--c4h-text-heading);
+}
+
+.c4h-timeline-hero p {
+  margin: 16px auto 0;
+  max-width: 720px;
+  color: var(--c4h-text-body);
+}
+
+.c4h-phase {
+  position: relative;
+  margin-bottom: 56px;
+}
+
+.c4h-phase-pill {
+  display: inline-block;
+  margin: 0 auto 28px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--c4h-secondary);
+  color: var(--c4h-primary);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.c4h-timeline-track {
+  display: none;
+}
+
+.c4h-milestone {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.c4h-milestone-copy h3 {
+  margin: 0 0 6px;
+  color: var(--c4h-text-heading);
+}
+
+.c4h-milestone-copy p {
+  margin: 0;
+  color: var(--c4h-text-body);
+}
+
+.c4h-dot {
+  display: none;
+}
+
+.c4h-card {
+  background: var(--c4h-bg-surface);
+  border: 1px solid var(--c4h-border);
+  border-radius: var(--c4h-radius);
+  padding: 18px;
+}
+
+.c4h-card h4 {
+  margin: 0 0 8px;
+  color: var(--c4h-text-heading);
+}
+
+.c4h-card p {
+  margin: 0;
+  color: var(--c4h-text-body);
+}
+
+.c4h-journey-endpoints {
+  display: grid;
+  gap: 16px;
+  margin: 8px 0 20px;
+}
+
+.c4h-endpoint-label {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--c4h-text-heading);
+}
+
+.c4h-endpoint-date {
+  margin: 4px 0 0;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.c4h-journey-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 960px) {
+  .c4h-timeline-track {
+    display: block;
+    position: absolute;
+    top: 64px;
+    bottom: 24px;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, transparent, var(--c4h-primary) 10%, var(--c4h-primary) 90%, transparent);
+    opacity: 0.2;
+  }
+
+  .c4h-milestone {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .c4h-milestone-reverse .c4h-milestone-copy {
+    order: 3;
+    text-align: left;
+  }
+
+  .c4h-milestone:not(.c4h-milestone-reverse) .c4h-milestone-copy {
+    text-align: right;
+  }
+
+  .c4h-milestone-reverse .c4h-card {
+    order: 1;
+  }
+
+  .c4h-dot {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: var(--c4h-primary);
+    border: 3px solid var(--c4h-bg-main);
+    box-shadow: 0 0 0 5px rgba(15, 42, 68, 0.15);
+  }
+
+  .c4h-journey-endpoints {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .c4h-journey-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .c4h-journey-grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+html[dir="rtl"] .c4h-footer-inner {
+  direction: rtl;
+}
+
+html[dir="rtl"] .c4h-footer-links {
+  align-items: flex-end;
+}
+
+html[dir="rtl"] .c4h-timeline-page {
+  direction: rtl;
+}
