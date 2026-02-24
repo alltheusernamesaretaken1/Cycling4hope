@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Cycling4hope",
   description: "A humanitarian cycling initiative from Oslo to Damascus supporting education and school rehabilitation projects in Syria.",
+  base: '/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -24,6 +25,5 @@ export default defineConfig({
     socialLinks: [
       //{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  }, 
-  base: '/Cycling4hope/',
+  },
 })
