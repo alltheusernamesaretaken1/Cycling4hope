@@ -1,31 +1,28 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
+title: Cycling from Oslo to Damascus
 hero:
-  name: "Cycling4hope"
-  text: "A humanitarian cycling initiative from Oslo to Damascus supporting education and school rehabilitation projects in Syria."
-  tagline: My great project tagline
-  hero:
+  name: Cycling from Oslo to Damascus
+  text: Supporting education and hope
+  tagline: A humanitarian cycling initiative supporting education and school projects in Syria.
   image:
-    light: '/assets/Logo_Transparrent.png'
-    dark: '/assets/Logo_Transparrent_DarkMode.png'
+    src: 'public/assets/skole_syria.jpg'
     alt: 'Website logo'
-
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Om prosjektet
+      link: /om-prosjektet
     - theme: alt
-      text: API Examples
-      link: /api-examples
-
+      text: Kontakt
+      link: /kontakt
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Humanitarian initiative
+    details: Et uavhengig initiativ for å støtte utdanning i Syria.
+  - title: Reise på tvers av Europa
+    details: En langsom, bærekraftig reise som skaper synlighet og engasjement.
+  - title: Transparens
+    details: Tydelig plan for innsamling, samarbeid og rapportering.
 ---
+
+<!-- Ekstra seksjoner kan komme her under home-blokkene -->
 
