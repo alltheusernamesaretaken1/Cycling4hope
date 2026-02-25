@@ -12,7 +12,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Om prosjektet', link: '/om-prosjektet' },
-          { text: 'Tidslinje', link: '/tidslinje' },
+          { text: 'Tidslinje', link: '/timeline' },
           { text: 'Presse', link: '/media' },
           { text: 'Kontakt', link: '/kontakt' }
         ]
