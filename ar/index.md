@@ -5,9 +5,6 @@ hero:
   name: ركوب الدراجات من أوسلو إلى دمشق
   text: دعم التعليم والأمل
   tagline: مبادرة إنسانية بالدراجات لدعم التعليم وإعادة تأهيل المدارس في سوريا.
-  image:
-    src: '/assets/skole_syria.jpg'
-    alt: 'Cycling4hope'
   actions:
     - theme: brand
       text: عن المشروع
@@ -24,3 +21,4 @@ features:
     details: خطة واضحة للتبرعات والشراكات والتقارير.
 ---
 
+<HvorforSection />

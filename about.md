@@ -1,6 +1,7 @@
 ---
 layout: page
-title: عن المشروع
+title: About the project
 ---
 
 <AboutPage />
+

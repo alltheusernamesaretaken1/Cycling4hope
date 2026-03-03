@@ -1,27 +1,25 @@
 ---
 layout: home
-title: Sykling fra Oslo til Damaskus
+title: Cycling from Oslo to Damascus
 hero:
-  name: Sykling fra Oslo til Damaskus
-  text: til støtte av utdanning 
-  tagline: Et humanitært sykkelinitiativ som støtter utdanning og skoleprosjekter i Syria.
-  image:
-    src: '/assets/skole_syria.jpg'
-    alt: 'Cycling4hope'
+  name: Cycling from Oslo to Damascus
+  text: Supporting education and hope
+  tagline: A humanitarian cycling initiative supporting education and school projects in Syria.
   actions:
     - theme: brand
-      text: Om prosjektet
-      link: /om-prosjektet
+      text: About
+      link: /en/about
     - theme: alt
-      text: Kontakt
-      link: /kontakt
+      text: Contact
+      link: /en/contact
 features:
-  - title: Humanitært initiativ
-    details: Et uavhengig initiativ for aa støtte utdanning i Syria.
-  - title: Reise pa tvers av Europa
-    details: En langsom og bærekraftig reise som skaper synlighet og engasjement.
-  - title: Transparens
-    details: Tydelig plan for innsamling, samarbeid og rapportering.
+  - title: Humanitarian initiative
+    details: An independent initiative to support education in Syria.
+  - title: Cross-continental journey
+    details: A slow and sustainable route that builds awareness and engagement.
+  - title: Transparency
+    details: A clear plan for fundraising, partnerships, and reporting.
 ---
 
-<!-- Ekstra seksjoner kan komme her under home-blokkene -->
+<HvorforSection />
+                                                                                                                

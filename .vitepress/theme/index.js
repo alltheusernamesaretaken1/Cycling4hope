@@ -2,11 +2,21 @@ import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 import Layout from './Layout.vue'
 import TimelinePage from './components/TimelinePage.vue'
+import HvorforSection from './components/HvorforSection.vue'
+import LangSwitch from './components/LangSwitch.vue'
+import AboutPage from './components/AboutPage.vue'
+import ContactPage from './components/ContactPage.vue'
+import MediaPage from './components/MediaPage.vue'
 
 export default {
   extends: DefaultTheme,
   Layout,
   enhanceApp({ app }) {
     app.component('TimelinePage', TimelinePage)
+    app.component('HvorforSection', HvorforSection)
+    app.component('LangSwitch', LangSwitch)
+    app.component('AboutPage', AboutPage)
+    app.component('ContactPage', ContactPage)
+    app.component('MediaPage', MediaPage)
   }
 }

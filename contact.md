@@ -1,6 +1,6 @@
 ---
 layout: page
-title: اتصل بنا
+title: Contact
 ---
 
 <ContactPage />

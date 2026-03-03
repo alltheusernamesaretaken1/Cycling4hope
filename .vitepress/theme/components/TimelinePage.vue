@@ -58,21 +58,21 @@ const copy = computed(() => {
   return {
     title: 'Tidslinje',
     intro:
-      'Var tre-fase struktur sikrer full aapenhet og stor humanitaer effekt gjennom hele prosjektet, fra forberedelser til implementering.',
+      'Vår tre-fase struktur sikrer full åpenhet og stor humanitær effekt gjennom hele prosjektet, fra forberedelser til implementering.',
     phaseLabel1: 'Fase 01',
     phaseLabel2: 'Fase 02',
     phaseLabel3: 'Fase 03',
     phase1: 'Planlegging og partnerskap',
     phase2: 'Sykkelreisen',
-    phase3: 'Oppfolging og implementering',
-    statusActive: 'Paagaar',
+    phase3: 'Oppfølging og implementering',
+    statusActive: 'Pågår',
     statusPlanned: 'Planlagt',
     p1Text:
-      'Omfattende forberedelser med ruteplanlegging, partnerskap, innsamling og logistikk for trygg og effektiv gjennomforing.',
+      'Omfattende forberedelser med ruteplanlegging, partnerskap, innsamling og logistikk for trygg og effektiv gjennomføring.',
     p2Text:
-      'Selve reisen fra Oslo til Damaskus. Vi sykler gjennom Europa og Midtosten for aa bygge engasjement og samle stotte.',
+      'Selve reisen fra Oslo til Damaskus. Vi sykler gjennom Europa og Midtøsten for å bygge engasjement og samle støtte.',
     p3Text:
-      'Rapportering av resultater, dokumentasjon av effekt og oppfolging av stottede utdanningsinitiativer.',
+      'Rapportering av resultater, dokumentasjon av effekt og oppfølging av støttede utdanningsinitiativer.',
     p1Date: 'Januar - Mars 2026',
     p2Date: 'Mai - August 2026',
     p3Date: 'September - Desember 2026'

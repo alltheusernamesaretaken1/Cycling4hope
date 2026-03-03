@@ -1,10 +1,15 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
+import LangSwitch from './components/LangSwitch.vue'
 const { Layout } = DefaultTheme
 </script>
 
 <template>
   <Layout>
+    <template #nav-bar-content-after>
+      <LangSwitch />
+    </template>
+
     <template #layout-bottom>
       <footer class="c4h-footer">
         <div class="c4h-footer-inner">
@@ -16,10 +21,10 @@ const { Layout } = DefaultTheme
           </div>
 
           <div class="c4h-footer-links">
-            <a href="/om-prosjektet">Om prosjektet</a>
-            <a href="/timeline">Tidslinje</a>
-            <a href="/media">Presse</a>
-            <a href="/kontakt">Kontakt</a>
+            <a href="/about">About</a>
+            <a href="/timeline">Timeline</a>
+            <a href="/media">Media</a>
+            <a href="/contact">Contact</a>
           </div>
         </div>
 

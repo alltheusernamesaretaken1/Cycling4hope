@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \":*)",
+      "Bash(head -20 grep -rn \"layout-max-width\\\\|content-width\\\\|VPDoc\\\\b\" \"c:/Users/marjohnsen/OneDrive - Sopra Steria/Private/Project syria/Website/node_modules/vitepress/dist/client/theme-default/styles/vars.css\")",
+      "Bash(xargs grep -l \"VPContent\\\\|vp-content\")",
+      "WebFetch(domain:www.bt.no)",
+      "WebFetch(domain:www.nrk.no)",
+      "WebFetch(domain:www.prio.org)",
+      "WebFetch(domain:www.wsj.com)",
+      "Bash(curl -s -L --max-time 15 -A \"Mozilla/5.0\" \"https://www.bt.no/utenriks/i/vg8PLj/syria-alaa-sami-gjenforenes-med-familien-etter-13-aar\")",
+      "Bash(curl -s -L --max-time 15 -A \"Mozilla/5.0\" \"https://www.nrk.no/buskerud/politikerne-diskuterer-retur-av-syriske-flyktninger-etter-assad-regimets-fall-i-syria-1.17174957\")",
+      "Bash(curl -s -L --max-time 15 -A \"Mozilla/5.0\" \"https://www.prio.org/podcasts/prios-peace-in-a-pod/105\")",
+      "Bash(curl -s -L --max-time 15 -k -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://www.prio.org/podcasts/prios-peace-in-a-pod/105\")",
+      "Bash(curl -s -L --max-time 15 -k -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://www.nrk.no/buskerud/politikerne-diskuterer-retur-av-syriske-flyktninger-etter-assad-regimets-fall-i-syria-1.17174957\")",
+      "Bash(curl -s -L --max-time 15 -k -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://www.bt.no/utenriks/i/vg8PLj/syria-alaa-sami-gjenforenes-med-familien-etter-13-aar\")",
+      "Bash(curl -s -L --max-time 15 -k -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://www.wsj.com/video/thousands-of-syrians-gather-for-first-friday-prayers-since-fall-of-assad/EBD8AE74-8CB6-4EC4-8C7C-D6F85FD4FBF7\")",
+      "Bash(curl -s -L --max-time 20 -k -H \"Accept: text/html,application/xhtml+xml\" -H \"Accept-Language: en-US,en;q=0.9\" -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://www.wsj.com/video/thousands-of-syrians-gather-for-first-friday-prayers-since-fall-of-assad/EBD8AE74-8CB6-4EC4-8C7C-D6F85FD4FBF7\")"
+    ]
+  }
+}

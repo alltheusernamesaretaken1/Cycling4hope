@@ -1,6 +1,6 @@
 ---
 layout: page
-title: عن المشروع
+title: Om prosjektet
 ---
 
 <AboutPage />

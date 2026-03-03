@@ -1,8 +1,9 @@
 ---
 layout: doc
-title: Tidslinje
+title: Timeline
 sidebar: false
 aside: false
 ---
 
 <TimelinePage />
+

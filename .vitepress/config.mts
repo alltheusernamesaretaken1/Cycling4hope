@@ -7,27 +7,27 @@ export default defineConfig({
   base: '/',
   locales: {
     root: {
-      label: 'Norsk',
-      lang: 'no-NO',
+      label: 'English',
+      lang: 'en-US',
       themeConfig: {
         nav: [
-          { text: 'Om prosjektet', link: '/om-prosjektet' },
-          { text: 'Tidslinje', link: '/timeline' },
-          { text: 'Presse', link: '/media' },
-          { text: 'Kontakt', link: '/kontakt' }
+          { text: 'About the project', link: '/about' },
+          { text: 'Timeline', link: '/timeline' },
+          { text: 'Media', link: '/media' },
+          { text: 'Contact', link: '/contact' }
         ]
       }
     },
-    en: {
-      label: 'English',
-      lang: 'en-US',
-      link: '/en/',
+    no: {
+      label: 'Norsk',
+      lang: 'no-NO',
+      link: '/no/',
       themeConfig: {
         nav: [
-          { text: 'About', link: '/en/about' },
-          { text: 'Timeline', link: '/en/timeline' },
-          { text: 'Media', link: '/en/media' },
-          { text: 'Contact', link: '/en/contact' }
+          { text: 'Om prosjektet', link: '/no/om-prosjektet' },
+          { text: 'Tidslinje', link: '/no/timeline' },
+          { text: 'Presse', link: '/no/media' },
+          { text: 'Kontakt', link: '/no/kontakt' }
         ]
       }
     },
@@ -54,16 +54,6 @@ export default defineConfig({
       dark: '/assets/Logo_Transparrent_DarkMode.png',
       alt: 'Website logo'
     },
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
 
     socialLinks: [
       //{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }
