@@ -232,6 +232,7 @@ const t = computed(() => {
 
     <!-- ── Initiator ── -->
     <section class="c4h-about-section c4h-about-person">
+      <h2 class="c4h-about-person-heading">{{ t.personHeading }}</h2>
       <div class="c4h-about-person-img-wrap">
         <img
           src="/assets/page_about_the_project/about_me.jpg"
@@ -239,8 +240,7 @@ const t = computed(() => {
           class="c4h-about-person-img"
         />
       </div>
-      <div class="c4h-about-person-text">
-        <h2>{{ t.personHeading }}</h2>
+      <div class="c4h-about-person-body">
         <p>{{ t.personP1 }}</p>
         <p>{{ t.personP2 }}</p>
         <p>{{ t.personP3 }}</p>

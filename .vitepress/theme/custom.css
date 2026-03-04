@@ -901,24 +901,30 @@ html[dir="rtl"] .c4h-tl-content {
   line-height: 1.6;
 }
 
-/* Person / initiator section */
+/* Person / initiator section – CSS grid for heading / image / body ordering */
 .c4h-about-person {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "img heading"
+    "img body";
+  column-gap: 56px;
+  row-gap: 16px;
+  align-items: start;
 }
 
-@media (min-width: 640px) {
-  .c4h-about-person {
-    flex-direction: row;
-    align-items: center;
-    gap: 56px;
-  }
+.c4h-about-person-heading {
+  grid-area: heading;
+  margin: 0 0 4px;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--c4h-text-heading);
 }
 
 .c4h-about-person-img-wrap {
-  flex-shrink: 0;
+  grid-area: img;
   width: 220px;
   height: 220px;
   border-radius: 18px;
@@ -933,20 +939,15 @@ html[dir="rtl"] .c4h-tl-content {
   object-fit: cover;
 }
 
-.c4h-about-person-text h2 {
-  margin: 0 0 12px;
+.c4h-about-person-body {
+  grid-area: body;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.c4h-about-person-quote {
-  margin: 0 0 20px !important;
-  font-style: italic;
-  color: var(--c4h-primary) !important;
-  opacity: 0.65;
-  font-weight: 500 !important;
-}
-
-.c4h-about-person-text p {
-  margin: 0 0 16px;
+.c4h-about-person-body p {
+  margin: 0;
   color: var(--c4h-text-body);
   line-height: 1.75;
   font-weight: 300;
@@ -954,13 +955,13 @@ html[dir="rtl"] .c4h-tl-content {
 
 /* Vision section */
 .c4h-about-vision {
-  text-align: center;
+  text-align: left;
   padding: 64px 0;
 }
 
 .c4h-about-vision-text {
   max-width: 600px;
-  margin: 0 auto 40px !important;
+  margin: 0 0 40px !important;
   font-size: 1.15rem !important;
   line-height: 1.75 !important;
   color: var(--c4h-text-body) !important;
@@ -1638,13 +1639,13 @@ html[dir="rtl"] .c4h-contact-press-link {
     margin-bottom: 40px;
   }
 
-  /* About – hero */
+  /* About – hero: add side margins, no full-width breakout */
   .c4h-about-hero {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin: 20px 0 40px;
   }
   .c4h-about-hero-img-wrap {
     aspect-ratio: 16 / 9;
+    border-radius: var(--c4h-radius);
   }
 
   /* About – goals */
@@ -1653,11 +1654,25 @@ html[dir="rtl"] .c4h-contact-press-link {
     border-radius: 12px;
   }
 
-  /* About – person portrait */
+  /* About – background: logo above text */
+  .c4h-about-bg-logo-wrap {
+    order: -1;
+  }
+
+  /* About – person: single-column grid with heading → img → body */
+  .c4h-about-person {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "heading"
+      "img"
+      "body";
+    row-gap: 20px;
+  }
   .c4h-about-person-img-wrap {
     width: 160px;
     height: 160px;
-    align-self: center;
+    justify-self: center;
   }
 
   /* About – vision */
