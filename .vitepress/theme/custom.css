@@ -1605,8 +1605,92 @@ html[dir="rtl"] .c4h-contact-press-link {
   opacity: 1;
 }
 
+/* ═══════════════════════════════════════
+   MOBILE RESPONSIVE OVERRIDES (≤ 640px)
+   ═══════════════════════════════════════ */
 @media (max-width: 640px) {
+
+  /* Navbar logo */
+  .VPNavBarTitle .logo {
+    height: 72px;
+  }
+
+  /* Footer */
+  .c4h-footer-inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Timeline */
+  .c4h-tl-page {
+    padding: 32px 20px;
+  }
+  .c4h-tl-card,
+  .c4h-tl-card-soft {
+    padding: 18px;
+  }
+
+  /* About – page container */
+  .c4h-about {
+    padding-bottom: 48px;
+  }
+  .c4h-about-section {
+    margin-bottom: 40px;
+  }
+
+  /* About – hero */
+  .c4h-about-hero {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .c4h-about-hero-img-wrap {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* About – goals */
+  .c4h-about-goals {
+    padding: 28px 20px;
+    border-radius: 12px;
+  }
+
+  /* About – person portrait */
+  .c4h-about-person-img-wrap {
+    width: 160px;
+    height: 160px;
+    align-self: center;
+  }
+
+  /* About – vision */
+  .c4h-about-vision {
+    padding: 36px 0;
+  }
+  .c4h-about-vision-box {
+    padding: 20px 24px;
+  }
+
+  /* Contact – form box */
+  .c4h-contact-form-wrap {
+    padding: 22px;
+  }
+  /* Contact – press box */
+  .c4h-contact-press {
+    padding: 20px;
+  }
+
+  /* Media – page container */
+  .c4h-media {
+    padding-bottom: 48px;
+  }
+
+  /* Media – cards: stack vertically, hide thumbnail */
+  .c4h-media-item {
+    flex-direction: column;
+  }
   .c4h-media-item-thumb {
-    width: 100px;
+    width: 100%;
+    height: 160px;
+  }
+  .c4h-media-item-body {
+    padding: 14px 16px;
   }
 }
