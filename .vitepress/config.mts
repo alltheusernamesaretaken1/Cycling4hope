@@ -5,6 +5,12 @@ export default defineConfig({
   title: "Cycling4hope",
   description: "A humanitarian cycling initiative from Oslo to Damascus supporting education and school rehabilitation projects in Syria.",
   base: '/',
+  head: [
+    ['meta', { property: 'og:image', content: '/assets/Logo_Thumbnail.png' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: '/assets/Logo_Thumbnail.png' }],
+  ],
   locales: {
     root: {
       label: 'English',
