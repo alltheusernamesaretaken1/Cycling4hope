@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: About
-      link: /en/about
+      link: /about
     - theme: alt
       text: Contact
-      link: /en/contact
+      link: /contact
 features:
   - title: Humanitarian initiative
     details: An independent initiative to support education in Syria.

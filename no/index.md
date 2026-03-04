@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: Om prosjektet
-      link: /om-prosjektet
+      link: /no/om-prosjektet
     - theme: alt
       text: Kontakt
-      link: /kontakt
+      link: /no/kontakt
 features:
   - title: Humanitært initiativ
     details: Et uavhengig initiativ for å støtte utdanning i Syria.
