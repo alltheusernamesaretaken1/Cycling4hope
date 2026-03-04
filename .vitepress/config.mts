@@ -6,6 +6,8 @@ export default defineConfig({
   description: "A humanitarian cycling initiative from Oslo to Damascus supporting education and school rehabilitation projects in Syria.",
   base: '/',
   head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/assets/Logo_Thumbnail.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/assets/Logo_Thumbnail.png' }],
     ['meta', { property: 'og:image', content: '/assets/Logo_Thumbnail.png' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
