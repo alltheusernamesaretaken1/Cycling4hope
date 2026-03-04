@@ -1819,6 +1819,10 @@ html[dir="rtl"] .c4h-contact-press-link {
   margin: 0 0 28px;
 }
 
+.dark .c4h-slide h2 {
+  color: #F3F2EF;
+}
+
 /* Cover slide */
 .c4h-slide-cover {
   background: var(--c4h-primary);
@@ -1900,6 +1904,18 @@ html[dir="rtl"] .c4h-contact-press-link {
 
 .dark .c4h-pres-italic {
   color: var(--c4h-secondary) !important;
+}
+
+.dark .c4h-pres-back {
+  color: #F3F2EF;
+}
+
+.dark .c4h-pres-route-stat h4 {
+  color: rgba(255,255,255,0.5);
+}
+
+.dark .c4h-pres-vision-box-label {
+  color: rgba(255,255,255,0.5);
 }
 
 /* Mission layout */
@@ -2161,8 +2177,7 @@ html[dir="rtl"] .c4h-pres-vision-list {
 /* ── Print styles ── */
 @media print {
   @page {
-    size: A4 portrait;
-    margin: 15mm 15mm 15mm 15mm;
+    margin: 0;
   }
 
   * {
@@ -2185,8 +2200,13 @@ html[dir="rtl"] .c4h-pres-vision-list {
     box-shadow: none !important;
     break-before: page;
     page-break-before: always;
-    padding: 40px 48px !important;
+    padding: 48px 56px !important;
     border-left: 5px solid #0F2A44 !important;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .c4h-slide:first-of-type {
