@@ -45,6 +45,7 @@ const norwegianItems = [
   {
     source: 'BT',
     sourceFull: 'Bergens Tidende',
+    domain: 'bt.no',
     type: 'Reportasje',
     date: '12. desember 2024',
     title: 'Syria: Alaa Sami gjenforenes med familien etter 13 år',
@@ -56,6 +57,7 @@ const norwegianItems = [
   {
     source: 'NRK',
     sourceFull: 'NRK Buskerud',
+    domain: 'nrk.no',
     type: 'Nyheter',
     date: 'Desember 2024',
     title: 'Politikerne diskuterer retur av syriske flyktninger etter Assad-regimets fall i Syria',
@@ -67,6 +69,7 @@ const norwegianItems = [
   {
     source: 'PRIO',
     sourceFull: 'Peace Research Institute Oslo',
+    domain: 'prio.org',
     type: 'Podkast',
     date: 'Desember 2024',
     title: 'What\'s Next for Syrian Refugees After Assad\'s Fall?',
@@ -81,6 +84,7 @@ const internationalItems = [
   {
     source: 'WSJ',
     sourceFull: 'The Wall Street Journal',
+    domain: 'wsj.com',
     type: 'Video',
     date: 'Desember 2024',
     title: 'Thousands of Syrians Gather for First Friday Prayers Since Fall of Assad',
@@ -117,18 +121,22 @@ const internationalItems = [
           rel="noopener noreferrer"
           class="c4h-media-item"
         >
-          <div class="c4h-media-item-source">{{ item.source }}</div>
+          <img v-if="item.image" :src="item.image" :alt="item.title" class="c4h-media-item-thumb" />
           <div class="c4h-media-item-body">
-            <div class="c4h-media-item-content">
-              <div class="c4h-media-item-meta">
-                <span class="c4h-media-item-type">{{ item.type }} · {{ item.date }}</span>
-                <span class="c4h-media-item-arrow">↗</span>
-              </div>
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.desc }}</p>
-              <span class="c4h-media-item-link">{{ ui[item.linkKey] }}</span>
+            <div class="c4h-media-item-meta">
+              <span class="c4h-media-item-source-label">
+                <img
+                  :src="`https://www.google.com/s2/favicons?domain=${item.domain}&sz=16`"
+                  class="c4h-media-item-favicon"
+                  :alt="item.sourceFull"
+                />
+                {{ item.sourceFull }}
+              </span>
+              <span class="c4h-media-item-arrow">↗</span>
             </div>
-            <img v-if="item.image" :src="item.image" :alt="item.title" class="c4h-media-item-thumb" />
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.desc }}</p>
+            <span class="c4h-media-item-link">{{ ui[item.linkKey] }}</span>
           </div>
         </a>
       </div>
@@ -149,10 +157,17 @@ const internationalItems = [
           rel="noopener noreferrer"
           class="c4h-media-item c4h-media-item-intl"
         >
-          <div class="c4h-media-item-source">{{ item.source }}</div>
+          <img v-if="item.image" :src="item.image" :alt="item.title" class="c4h-media-item-thumb" />
           <div class="c4h-media-item-body">
             <div class="c4h-media-item-meta">
-              <span class="c4h-media-item-type">{{ item.type }} · {{ item.date }}</span>
+              <span class="c4h-media-item-source-label">
+                <img
+                  :src="`https://www.google.com/s2/favicons?domain=${item.domain}&sz=16`"
+                  class="c4h-media-item-favicon"
+                  :alt="item.sourceFull"
+                />
+                {{ item.sourceFull }}
+              </span>
               <span class="c4h-media-item-arrow">↗</span>
             </div>
             <h3>{{ item.title }}</h3>
