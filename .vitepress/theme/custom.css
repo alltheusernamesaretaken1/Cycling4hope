@@ -214,13 +214,13 @@ body {
 
 /* Hero background image */
 .VPHomeHero {
-  background-image: linear-gradient(rgba(243, 242, 239, 0.88), rgba(243, 242, 239, 0.88)), url('/assets/home_page_hero_background_image.avif');
+  background-image: linear-gradient(rgba(243, 242, 239, 0.72), rgba(243, 242, 239, 0.72)), url('/assets/home_page_hero_background_image.avif');
   background-size: cover;
   background-position: center;
 }
 
 .dark .VPHomeHero {
-  background-image: linear-gradient(rgba(11, 23, 36, 0.90), rgba(11, 23, 36, 0.90)), url('/assets/home_page_hero_background_image.avif');
+  background-image: linear-gradient(rgba(11, 23, 36, 0.75), rgba(11, 23, 36, 0.75)), url('/assets/home_page_hero_background_image.avif');
 }
 
 /* Homepage hero image: ~50% larger + same radius as feature cards */
