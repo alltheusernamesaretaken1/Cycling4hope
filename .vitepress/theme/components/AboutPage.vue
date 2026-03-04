@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
 
-const { lang } = useData()
+const { lang, isDark } = useData()
 
 const t = computed(() => {
   if (lang.value === 'ar') {
@@ -34,6 +34,13 @@ const t = computed(() => {
       visionItems: ['إعادة تأهيل المباني المدرسية', 'تحسين بيئات التعلم', 'الوصول إلى المواد الضرورية', 'دعم المبادرات المحلية'],
       visionBoxLabel: 'الهدف النهائي',
       visionBoxBody: 'الهدف هو ضمان حصول الأطفال على تعليم آمن ومستقر – شرط أساسي لإعادة الإعمار والتنمية المجتمعية والسلام الدائم.',
+      routeHeading: 'المسار',
+      routeStat1Label: 'رحلة دراجة طويلة المدى',
+      routeStat1Value: 'جولة عبر أوروبا',
+      routeStat2Label: 'المسار',
+      routeStat2Value: 'النرويج ← السويد ← الدنمارك ← ألمانيا ← التشيك ← النمسا ← المجر ← صربيا ← بلغاريا ← تركيا ← سوريا',
+      routeStat3Label: 'المدة',
+      routeStat3Value: 'حوالي 3 أشهر',
     }
   }
   if (lang.value === 'no-NO') {
@@ -65,6 +72,13 @@ const t = computed(() => {
       visionItems: ['Rehabilitering av skolebygg', 'Forbedring av læringsmiljø', 'Tilgang til nødvendig materiell', 'Støtte til lokale initiativer'],
       visionBoxLabel: 'Langsiktig mål',
       visionBoxBody: 'Målet er å sikre at barn får tilgang til trygg og stabil skolegang – en forutsetning for gjenoppbygging, samfunnsutvikling og varig fred.',
+      routeHeading: 'Rute',
+      routeStat1Label: 'Langdistanse sykkeltur',
+      routeStat1Value: 'Sykkeltur på tvers av Europa',
+      routeStat2Label: 'Rute',
+      routeStat2Value: 'Norge → Sverige → Danmark → Tyskland → Tjekkia → Østerrike → Ungarn → Serbia → Bulgaria → Tyrkia → Syria',
+      routeStat3Label: 'Varighet',
+      routeStat3Value: 'ca. 3 måneder',
     }
   }
   // Default: English
@@ -96,6 +110,13 @@ const t = computed(() => {
     visionItems: ['Rehabilitation of school buildings', 'Improvement of learning environments', 'Access to necessary materials', 'Support for local initiatives'],
     visionBoxLabel: 'Long-term goal',
     visionBoxBody: 'The goal is to ensure that children have access to safe and stable schooling – a prerequisite for reconstruction, societal development and lasting peace.',
+    routeHeading: 'Route',
+    routeStat1Label: 'Long-distance cycling',
+    routeStat1Value: 'A cross-European cycling journey',
+    routeStat2Label: 'Route',
+    routeStat2Value: 'Norway → Sweden → Denmark → Germany → Czech Republic → Austria → Hungary → Serbia → Bulgaria → Turkey → Syria',
+    routeStat3Label: 'Duration',
+    routeStat3Value: 'approx. 3 months',
   }
 })
 </script>
@@ -128,12 +149,67 @@ const t = computed(() => {
           <p>{{ t.bgP3 }}</p>
           <p>{{ t.bgP4 }}</p>
         </div>
+        <div class="c4h-about-bg-logo-wrap">
+          <img
+            :src="isDark ? '/assets/Logo_Transparrent_DarkMode.png' : '/assets/Logo_Transparrent.png'"
+            alt="Cycling4hope"
+            class="c4h-about-bg-logo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Route ── -->
+    <section class="c4h-about-section c4h-about-route-section">
+      <h2>{{ t.routeHeading }}</h2>
+      <div class="c4h-about-route-layout">
         <div class="c4h-about-route-img-wrap">
           <img
             src="/assets/page_about_the_project/route_artistic.png"
             alt="Route map"
             class="c4h-about-route-img"
           />
+        </div>
+        <div class="c4h-about-route-stats">
+          <div class="c4h-about-route-stat">
+            <div class="c4h-about-route-stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/>
+                <circle cx="15" cy="5" r="1"/>
+                <path d="M12 17.5V14l-3-3 4-3 2 3h2"/>
+              </svg>
+            </div>
+            <div>
+              <h4>{{ t.routeStat1Label }}</h4>
+              <p>{{ t.routeStat1Value }}</p>
+            </div>
+          </div>
+          <div class="c4h-about-route-stat">
+            <div class="c4h-about-route-stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6" cy="19" r="3"/>
+                <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+                <circle cx="18" cy="5" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <h4>{{ t.routeStat2Label }}</h4>
+              <p>{{ t.routeStat2Value }}</p>
+            </div>
+          </div>
+          <div class="c4h-about-route-stat">
+            <div class="c4h-about-route-stat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                <line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/>
+                <line x1="3" x2="21" y1="10" y2="10"/>
+              </svg>
+            </div>
+            <div>
+              <h4>{{ t.routeStat3Label }}</h4>
+              <p>{{ t.routeStat3Value }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

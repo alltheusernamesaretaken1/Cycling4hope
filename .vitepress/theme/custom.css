@@ -993,7 +993,7 @@ html[dir="rtl"] .c4h-tl-content {
   color: #fff;
 }
 
-/* Background section – two-column layout with route image */
+/* Background section – two-column layout with logo */
 .c4h-about-background-layout {
   display: flex;
   flex-direction: column;
@@ -1003,15 +1003,47 @@ html[dir="rtl"] .c4h-tl-content {
 @media (min-width: 640px) {
   .c4h-about-background-layout {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 48px;
   }
   .c4h-about-background-layout .c4h-about-body {
     flex: 1;
   }
-  .c4h-about-route-img-wrap {
+  .c4h-about-bg-logo-wrap {
     flex-shrink: 0;
-    width: 260px;
+    width: 380px;
+  }
+}
+
+.c4h-about-bg-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Route section – image left, stats right */
+.c4h-about-route-section h2 {
+  margin-bottom: 32px;
+}
+
+.c4h-about-route-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .c4h-about-route-layout {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 56px;
+  }
+  .c4h-about-route-img-wrap {
+    flex: 0 0 300px;
+  }
+  .c4h-about-route-stats {
+    flex: 1;
   }
 }
 
@@ -1025,6 +1057,44 @@ html[dir="rtl"] .c4h-tl-content {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.c4h-about-route-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.c4h-about-route-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.c4h-about-route-stat-icon {
+  width: 52px;
+  height: 72px;
+  background: var(--c4h-primary);
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.c4h-about-route-stat h4 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c4h-text-heading);
+}
+
+.c4h-about-route-stat p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--c4h-text-body);
+  line-height: 1.6;
 }
 
 /* Vision section – two-column row: list left, box right */
