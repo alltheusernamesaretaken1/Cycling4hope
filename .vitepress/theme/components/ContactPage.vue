@@ -12,17 +12,7 @@ const t = computed(() => {
       emailLabel: 'البريد الإلكتروني',
       phoneLabel: 'الهاتف',
       pressHeading: 'الصحافة والإعلام',
-      pressText: 'هل أنت صحفي أو تعمل في وسائل الإعلام؟ يسعدنا تزويدك بمجموعة صحفية تتضمن صوراً عالية الجودة ومعلومات مفصلة.',
-      pressLink: 'زيارة صفحة الصحافة',
-      formName: 'الاسم',
-      formNamePlaceholder: 'اسمك الكامل',
-      formEmail: 'البريد الإلكتروني',
-      formEmailPlaceholder: 'بريدك@مثال.com',
-      formSubject: 'الموضوع (اختياري)',
-      formSubjectPlaceholder: 'ما الذي يتعلق به الأمر؟',
-      formMessage: 'الرسالة',
-      formMessagePlaceholder: 'اكتب رسالتك هنا...',
-      formSubmit: 'إرسال الرسالة',
+      pressText: 'هل أنت صحفي أو تعمل في وسائل الإعلام وتريد تغطية المشروع؟ لا تتردد في التواصل معنا عبر البريد الإلكتروني أو الهاتف – يسعدنا إجراء المقابلات والمحادثات التمهيدية.',
     }
   }
   if (lang.value === 'no-NO') {
@@ -32,17 +22,7 @@ const t = computed(() => {
       emailLabel: 'E-post',
       phoneLabel: 'Telefon',
       pressHeading: 'Presse & Media',
-      pressText: 'Er du journalist eller jobber i media? Vi har et eget pressesett med høyoppløselige bilder og bakgrunnsinfo.',
-      pressLink: 'Gå til pressesiden',
-      formName: 'Navn',
-      formNamePlaceholder: 'Ola Nordmann',
-      formEmail: 'E-post',
-      formEmailPlaceholder: 'ola@eksempel.no',
-      formSubject: 'Emne (valgfritt)',
-      formSubjectPlaceholder: 'Hva gjelder det?',
-      formMessage: 'Melding',
-      formMessagePlaceholder: 'Skriv din melding her...',
-      formSubmit: 'Send melding',
+      pressText: 'Er du journalist eller jobber i media og ønsker å dekke prosjektet? Ta gjerne kontakt på e-post eller telefon – vi stiller gjerne opp til intervjuer og bakgrunnssamtaler.',
     }
   }
   return {
@@ -51,17 +31,7 @@ const t = computed(() => {
     emailLabel: 'Email',
     phoneLabel: 'Phone',
     pressHeading: 'Press & Media',
-    pressText: 'Are you a journalist or working in media? We have a press kit with high-resolution images and background information.',
-    pressLink: 'Go to the press page',
-    formName: 'Name',
-    formNamePlaceholder: 'Your name',
-    formEmail: 'Email',
-    formEmailPlaceholder: 'you@example.com',
-    formSubject: 'Subject (optional)',
-    formSubjectPlaceholder: 'What is it regarding?',
-    formMessage: 'Message',
-    formMessagePlaceholder: 'Write your message here...',
-    formSubmit: 'Send message',
+    pressText: 'Are you a journalist or working in media and want to cover the project? Feel free to reach out by email or phone – we\'re happy to do interviews and background conversations.',
   }
 })
 </script>
@@ -102,67 +72,17 @@ const t = computed(() => {
         <div class="c4h-contact-press">
           <h3>{{ t.pressHeading }}</h3>
           <p>{{ t.pressText }}</p>
-          <a href="/media" class="c4h-contact-press-link">
-            {{ t.pressLink }} →
-          </a>
         </div>
 
       </div>
 
-      <!-- Right: form -->
-      <div class="c4h-contact-form-wrap">
-        <form
-          action="https://formspree.io/f/placeholder"
-          method="POST"
-          class="c4h-contact-form"
-        >
-          <div class="c4h-contact-form-row">
-            <div class="c4h-contact-field">
-              <label for="c4h-name">{{ t.formName }}</label>
-              <input
-                id="c4h-name"
-                type="text"
-                name="name"
-                :placeholder="t.formNamePlaceholder"
-                autocomplete="name"
-              />
-            </div>
-            <div class="c4h-contact-field">
-              <label for="c4h-email">{{ t.formEmail }}</label>
-              <input
-                id="c4h-email"
-                type="email"
-                name="email"
-                :placeholder="t.formEmailPlaceholder"
-                autocomplete="email"
-              />
-            </div>
-          </div>
-
-          <div class="c4h-contact-field">
-            <label for="c4h-subject">{{ t.formSubject }}</label>
-            <input
-              id="c4h-subject"
-              type="text"
-              name="subject"
-              :placeholder="t.formSubjectPlaceholder"
-            />
-          </div>
-
-          <div class="c4h-contact-field">
-            <label for="c4h-message">{{ t.formMessage }}</label>
-            <textarea
-              id="c4h-message"
-              name="message"
-              rows="5"
-              :placeholder="t.formMessagePlaceholder"
-            ></textarea>
-          </div>
-
-          <button type="submit" class="c4h-contact-submit">
-            {{ t.formSubmit }}
-          </button>
-        </form>
+      <!-- Right: image -->
+      <div class="c4h-contact-right">
+        <img
+          src="/assets/page_contact/alaa_interview_NRK.jpg"
+          alt="Alaa Same – NRK interview"
+          class="c4h-contact-right-img"
+        />
       </div>
 
     </section>

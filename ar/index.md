@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: اتصل بنا
       link: /ar/contact
+    - theme: alt
+      text: عرض المشروع
+      link: /ar/presentation
 features:
   - title: مبادرة إنسانية
     details: مبادرة مستقلة لدعم التعليم في سوريا.

@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: Contact
       link: /contact
+    - theme: alt
+      text: Project Presentation
+      link: /presentation
 features:
   - title: Humanitarian initiative
     details: An independent initiative to support education in Syria.

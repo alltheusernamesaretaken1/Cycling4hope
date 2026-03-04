@@ -52,7 +52,7 @@ const norwegianItems = [
     desc: 'Søndag falt Assad, og jubelen fylte gatene. Allerede mandag morgen krysset Alaa Sami grensen og satte føttene i Damaskus for første gang på 13 år.',
     url: 'https://www.bt.no/utenriks/i/vg8PLj/syria-alaa-sami-gjenforenes-med-familien-etter-13-aar',
     linkKey: 'readMore',
-    image: '/assets/media/bt_alaa_sami.jpg',
+    image: '/assets/page_media/bt_alaa_sami.jpg',
   },
   {
     source: 'NRK',
@@ -64,7 +64,7 @@ const norwegianItems = [
     desc: 'Norske politikere diskuterer konsekvensene av Assads fall og hva det betyr for syriske flyktninger i Norge.',
     url: 'https://www.nrk.no/buskerud/politikerne-diskuterer-retur-av-syriske-flyktninger-etter-assad-regimets-fall-i-syria-1.17174957',
     linkKey: 'readMore',
-    image: '/assets/media/nrk_flyktninger.jpg',
+    image: '/assets/page_media/nrk_flyktninger.jpg',
   },
   {
     source: 'PRIO',
@@ -76,7 +76,7 @@ const norwegianItems = [
     desc: 'Alaa Same deler sin personlige historie som syrisk flyktning i Norge – og reaksjonen da han fikk vite at regimet som styrte hjemlandet hans i tiår, endelig hadde falt.',
     url: 'https://www.prio.org/podcasts/prios-peace-in-a-pod/105',
     linkKey: 'listenEpisode',
-    image: '/assets/media/prio_podcast.jpg',
+    image: '/assets/page_media/prio_podcast.jpg',
   },
 ]
 
@@ -91,7 +91,7 @@ const internationalItems = [
     desc: 'Thousands of Syrians gathered in Damascus for the first Friday prayers since the fall of Bashar al-Assad\'s government, marking a historic moment of transition for the country.',
     url: 'https://www.wsj.com/video/thousands-of-syrians-gather-for-first-friday-prayers-since-fall-of-assad/EBD8AE74-8CB6-4EC4-8C7C-D6F85FD4FBF7',
     linkKey: 'watchVideo',
-    image: '/assets/media/wsj_friday_prayers.jpg',
+    image: '/assets/page_media/wsj_friday_prayers.jpg',
   },
 ]
 </script>

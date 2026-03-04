@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: Kontakt
       link: /no/kontakt
+    - theme: alt
+      text: Prosjektpresentasjon
+      link: /no/presentasjon
 features:
   - title: Humanitært initiativ
     details: Et uavhengig initiativ for å støtte utdanning i Syria.

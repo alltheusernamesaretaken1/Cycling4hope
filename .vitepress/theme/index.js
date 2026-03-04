@@ -7,6 +7,7 @@ import LangSwitch from './components/LangSwitch.vue'
 import AboutPage from './components/AboutPage.vue'
 import ContactPage from './components/ContactPage.vue'
 import MediaPage from './components/MediaPage.vue'
+import PresentationPage from './components/PresentationPage.vue'
 
 export default {
   extends: DefaultTheme,
@@ -18,5 +19,6 @@ export default {
     app.component('AboutPage', AboutPage)
     app.component('ContactPage', ContactPage)
     app.component('MediaPage', MediaPage)
+    app.component('PresentationPage', PresentationPage)
   }
 }
