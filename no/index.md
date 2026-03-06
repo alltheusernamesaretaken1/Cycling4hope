@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: Prosjektpresentasjon
       link: /no/presentasjon
+    - theme: alt
+      text: One-pager
+      link: /no/onepager
 features:
   - title: Humanitært initiativ
     details: Et uavhengig initiativ for å støtte utdanning i Syria.
