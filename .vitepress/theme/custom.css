@@ -2349,6 +2349,7 @@ html[dir="rtl"] .c4h-pres-vision-list {
   height: 420px;
   background: var(--c4h-bg-surface);
   box-shadow: 0 2px 20px rgba(15, 42, 68, 0.08);
+  isolation: isolate;
 }
 
 .c4h-routemap-map {
