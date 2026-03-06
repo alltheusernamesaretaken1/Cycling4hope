@@ -7,7 +7,6 @@ let mapInstance = null
 const stops = [
   { lat: 59.9139, lng: 10.7522 },
   { lat: 57.7089, lng: 11.9746 },
-  { lat: 55.6050, lng: 13.0038 },
   { lat: 55.6761, lng: 12.5683 },
   { lat: 53.5753, lng: 10.0153 },
   { lat: 52.5200, lng: 13.4050 },

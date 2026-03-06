@@ -11,7 +11,6 @@ const markers = []
 const stops = [
   { name: 'Oslo',       country: { en: 'Norway',      no: 'Norge',     ar: 'النرويج'    }, lat: 59.9139, lng: 10.7522, desc: { en: 'Starting point – April 2025.', no: 'Startpunkt – april 2025.', ar: 'نقطة البداية – أبريل 2025.' } },
   { name: 'Gothenburg', country: { en: 'Sweden',       no: 'Sverige',   ar: 'السويد'     }, lat: 57.7089, lng: 11.9746, desc: { en: 'Planned stop in Sweden.',        no: 'Planlagt stopp i Sverige.',  ar: 'توقف مخطط في السويد.' } },
-  { name: 'Malmö',      country: { en: 'Sweden',       no: 'Sverige',   ar: 'السويد'     }, lat: 55.6050, lng: 13.0038, desc: { en: 'Planned stop before Denmark.',   no: 'Planlagt stopp før Danmark.', ar: 'توقف مخطط قبل الدنمارك.' } },
   { name: 'Copenhagen', country: { en: 'Denmark',      no: 'Danmark',   ar: 'الدنمارك'   }, lat: 55.6761, lng: 12.5683, desc: { en: 'Planned stop in Denmark.',        no: 'Planlagt stopp i Danmark.',  ar: 'توقف مخطط في الدنمارك.' } },
   { name: 'Hamburg',    country: { en: 'Germany',      no: 'Tyskland',  ar: 'ألمانيا'    }, lat: 53.5753, lng: 10.0153, desc: { en: 'Planned stop in Germany.',        no: 'Planlagt stopp i Tyskland.', ar: 'توقف مخطط في ألمانيا.' } },
   { name: 'Berlin',     country: { en: 'Germany',      no: 'Tyskland',  ar: 'ألمانيا'    }, lat: 52.5200, lng: 13.4050, desc: { en: 'Planned stop in Germany.',        no: 'Planlagt stopp i Tyskland.', ar: 'توقف مخطط في ألمانيا.' } },
@@ -38,15 +37,15 @@ const locale = computed(() => {
 const ui = computed(() => {
   if (lang.value === 'ar') return {
     heading: 'المسار', sub: 'رحلة دراجة منفردة مخططة تمتد ~5500 كم عبر أوروبا إلى سوريا – عبر 11 دولة على مدى نحو 3 أشهر. قد تتطور المسار والجدول الزمني مع تقدم الرحلة.',
-    stats: [{ val: '~5 500', label: 'كيلومتر' }, { val: '11', label: 'دولة' }, { val: '18', label: 'توقف' }, { val: '~3 أشهر', label: 'المدة' }],
+    stats: [{ val: '~5 500', label: 'كيلومتر' }, { val: '11', label: 'دولة' }, { val: '17', label: 'توقف' }, { val: '~3 أشهر', label: 'المدة' }],
   }
   if (lang.value === 'no-NO') return {
     heading: 'Rute', sub: 'En planlagt solo sykkelreise på omtrent 5 500 km gjennom Europa til Syria – gjennom 11 land over omtrent 3 måneder. Rute og tidslinje kan endre seg underveis.',
-    stats: [{ val: '~5 500', label: 'Kilometer' }, { val: '11', label: 'Land' }, { val: '18', label: 'Stopp' }, { val: '~3 mnd', label: 'Varighet' }],
+    stats: [{ val: '~5 500', label: 'Kilometer' }, { val: '11', label: 'Land' }, { val: '17', label: 'Stopp' }, { val: '~3 mnd', label: 'Varighet' }],
   }
   return {
     heading: 'Route', sub: 'A planned solo cycling journey of approximately 5,500 km across Europe to Syria — through 11 countries over roughly 3 months. The route and timeline may evolve as the journey progresses.',
-    stats: [{ val: '~5,500', label: 'Kilometres' }, { val: '11', label: 'Countries' }, { val: '18', label: 'Stops' }, { val: '~3 mo', label: 'Duration' }],
+    stats: [{ val: '~5,500', label: 'Kilometres' }, { val: '11', label: 'Countries' }, { val: '17', label: 'Stops' }, { val: '~3 mo', label: 'Duration' }],
   }
 })
 
