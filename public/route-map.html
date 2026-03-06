@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rute – Cycling4Hope</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+
+<style>
+  /* ── Design system tokens (mirrors custom.css) ── */
+  :root {
+    --c4h-primary:      #0F2A44;
+    --c4h-secondary:    #F1E6CF;
+    --c4h-text-heading: #0F2A44;
+    --c4h-text-body:    #2B2B2B;
+    --c4h-bg-main:      #F3F2EF;
+    --c4h-bg-surface:   #FFFFFF;
+    --c4h-border:       rgba(15,42,68,0.15);
+    --c4h-radius:       14px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    background: var(--c4h-bg-main);
+    color: var(--c4h-text-body);
+  }
+
+  /* ── Layout ── */
+  .c4h-map-section {
+    padding: 32px 24px 36px;
+  }
+
+  .c4h-map-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ── Heading ── */
+  .c4h-map-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: var(--c4h-secondary);
+    color: var(--c4h-primary);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .c4h-map-heading {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 900;
+    color: var(--c4h-text-heading);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+
+  .c4h-map-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--c4h-text-body);
+    line-height: 1.65;
+    margin-bottom: 20px;
+    max-width: 560px;
+  }
+
+  /* ── Stats row ── */
+  .c4h-map-stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+
+  .c4h-map-stat {
+    background: rgba(15, 42, 68, 0.06);
+    border-radius: var(--c4h-radius);
+    padding: 12px 20px;
+    min-width: 130px;
+  }
+
+  .c4h-map-stat-val {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--c4h-primary);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .c4h-map-stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c4h-text-body);
+    opacity: 0.6;
+    margin-top: 3px;
+  }
+
+  /* ── Map container ── */
+  .c4h-map-wrap {
+    border-radius: var(--c4h-radius);
+    border: 1px solid var(--c4h-border);
+    overflow: hidden;
+    height: 460px;
+    background: var(--c4h-bg-surface);
+    box-shadow: 0 2px 20px rgba(15,42,68,0.08);
+  }
+
+  #c4h-map { width: 100%; height: 100%; }
+
+  /* ── Leaflet overrides ── */
+  .leaflet-container {
+    font-family: Inter, system-ui, sans-serif;
+  }
+
+  .leaflet-control-attribution {
+    font-size: 10px;
+    background: rgba(243,242,239,0.92) !important;
+    color: var(--c4h-text-body) !important;
+  }
+
+  .leaflet-control-zoom a {
+    background: var(--c4h-bg-surface) !important;
+    color: var(--c4h-primary) !important;
+    border-color: var(--c4h-border) !important;
+    font-weight: 700;
+  }
+
+  .leaflet-control-zoom a:hover {
+    background: var(--c4h-secondary) !important;
+  }
+
+  /* ── Custom popup ── */
+  .leaflet-popup-content-wrapper {
+    border-radius: 10px !important;
+    border: 1px solid var(--c4h-border);
+    box-shadow: 0 4px 20px rgba(15,42,68,0.12) !important;
+    padding: 0 !important;
+  }
+
+  .leaflet-popup-content { margin: 0 !important; }
+  .leaflet-popup-tip { background: white !important; }
+
+  .c4h-popup {
+    padding: 12px 16px;
+    min-width: 150px;
+  }
+
+  .c4h-popup-country {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c4h-text-body);
+    opacity: 0.55;
+    margin-bottom: 3px;
+  }
+
+  .c4h-popup-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c4h-primary);
+    margin-bottom: 4px;
+  }
+
+  .c4h-popup-desc {
+    font-size: 12px;
+    color: var(--c4h-text-body);
+    line-height: 1.5;
+  }
+
+  /* ── Stop pills ── */
+  .c4h-map-stops {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .c4h-map-stop-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 11px;
+    background: var(--c4h-bg-surface);
+    border: 1px solid var(--c4h-border);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--c4h-text-body);
+    cursor: pointer;
+    font-family: Inter, system-ui, sans-serif;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+
+  .c4h-map-stop-pill:hover {
+    background: var(--c4h-secondary);
+    border-color: var(--c4h-primary);
+    color: var(--c4h-primary);
+  }
+
+  .c4h-map-stop-pill.is-start,
+  .c4h-map-stop-pill.is-end {
+    background: var(--c4h-primary);
+    color: #fff;
+    border-color: var(--c4h-primary);
+    font-weight: 700;
+  }
+
+  .c4h-stop-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--c4h-primary);
+    flex-shrink: 0;
+  }
+
+  .c4h-map-stop-pill.is-start .c4h-stop-dot,
+  .c4h-map-stop-pill.is-end .c4h-stop-dot {
+    background: var(--c4h-secondary);
+  }
+
+  @media (max-width: 640px) {
+    .c4h-map-wrap { height: 340px; }
+    .c4h-map-stat { padding: 10px 14px; min-width: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="c4h-map-section">
+  <div class="c4h-map-inner">
+
+    <span class="c4h-map-label">Sykkelturen</span>
+    <h2 class="c4h-map-heading">Rute</h2>
+    <p class="c4h-map-sub">En sykkelreise på tvers av Europa og inn i Syria – ca. 5 500 km gjennom 11 land på omtrent 3 måneder.</p>
+
+    <div class="c4h-map-stats">
+      <div class="c4h-map-stat">
+        <div class="c4h-map-stat-val">~5 500</div>
+        <div class="c4h-map-stat-label">Kilometer</div>
+      </div>
+      <div class="c4h-map-stat">
+        <div class="c4h-map-stat-val">11</div>
+        <div class="c4h-map-stat-label">Land</div>
+      </div>
+      <div class="c4h-map-stat">
+        <div class="c4h-map-stat-val">19</div>
+        <div class="c4h-map-stat-label">Stopp</div>
+      </div>
+      <div class="c4h-map-stat">
+        <div class="c4h-map-stat-val">~3 mnd</div>
+        <div class="c4h-map-stat-label">Varighet</div>
+      </div>
+    </div>
+
+    <div class="c4h-map-wrap">
+      <div id="c4h-map"></div>
+    </div>
+
+    <div class="c4h-map-stops" id="c4h-stops-list"></div>
+
+  </div>
+</section>
+
+<script>
+const stops = [
+  { name: "Oslo",       country: "Norge",     lat: 59.9139, lng: 10.7522, desc: "Startpunkt – april 2025." },
+  { name: "Gothenburg", country: "Sverige",   lat: 57.7089, lng: 11.9746, desc: "Foreslått stopp i Sverige." },
+  { name: "Malmö",      country: "Sverige",   lat: 55.6050, lng: 13.0038, desc: "Foreslått stopp før Danmark." },
+  { name: "Copenhagen", country: "Danmark",   lat: 55.6761, lng: 12.5683, desc: "Foreslått stopp i Danmark." },
+  { name: "Hamburg",    country: "Tyskland",  lat: 53.5753, lng: 10.0153, desc: "Foreslått stopp i Tyskland." },
+  { name: "Berlin",     country: "Tyskland",  lat: 52.5200, lng: 13.4050, desc: "Foreslått stopp i Tyskland." },
+  { name: "Dresden",    country: "Tyskland",  lat: 51.0504, lng: 13.7373, desc: "Foreslått stopp mot Sentral-Europa." },
+  { name: "Prague",     country: "Tsjekkia",  lat: 50.0755, lng: 14.4378, desc: "Foreslått stopp i Sentral-Europa." },
+  { name: "Vienna",     country: "Østerrike", lat: 48.2082, lng: 16.3738, desc: "Foreslått stopp i Sentral-Europa." },
+  { name: "Budapest",   country: "Ungarn",    lat: 47.4979, lng: 19.0402, desc: "Foreslått stopp i Sentral-Europa." },
+  { name: "Belgrade",   country: "Serbia",    lat: 44.8176, lng: 20.4633, desc: "Foreslått stopp på vei sørover." },
+  { name: "Sofia",      country: "Bulgaria",  lat: 42.6977, lng: 23.3219, desc: "Foreslått stopp før Tyrkia." },
+  { name: "Istanbul",   country: "Tyrkia",    lat: 41.0082, lng: 28.9784, desc: "Inngang til Tyrkia." },
+  { name: "Ankara",     country: "Tyrkia",    lat: 39.9334, lng: 32.8597, desc: "Foreslått stopp i Tyrkia." },
+  { name: "Adana",      country: "Tyrkia",    lat: 37.0000, lng: 35.3213, desc: "Foreslått stopp i Sør-Tyrkia." },
+  { name: "Gaziantep",  country: "Tyrkia",    lat: 37.0662, lng: 37.3833, desc: "Foreslått stopp nær grensen." },
+  { name: "Aleppo",     country: "Syria",     lat: 36.2021, lng: 37.1343, desc: "Foreslått stopp i Syria." },
+  { name: "Damascus",   country: "Syria",     lat: 33.5138, lng: 36.2765, desc: "Målpunkt – Damaskus." },
+];
+
+const map = L.map('c4h-map', {
+  center: [48, 22],
+  zoom: 4,
+  zoomControl: true,
+  scrollWheelZoom: false,
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 19,
+}).addTo(map);
+
+const latlngs = stops.map(s => [s.lat, s.lng]);
+
+L.polyline(latlngs, {
+  color: 'rgba(15,42,68,0.12)',
+  weight: 8,
+  lineCap: 'round',
+  lineJoin: 'round',
+}).addTo(map);
+
+L.polyline(latlngs, {
+  color: '#0F2A44',
+  weight: 3,
+  lineCap: 'round',
+  lineJoin: 'round',
+}).addTo(map);
+
+function makeIcon(type) {
+  const isEndpoint = type === 'start' || type === 'end';
+  const size   = isEndpoint ? 14 : 9;
+  const border = isEndpoint ? 3 : 2;
+  const fill   = isEndpoint ? '#F1E6CF' : '#F3F2EF';
+
+  return L.divIcon({
+    className: '',
+    html: `<div style="
+      width:${size}px;height:${size}px;
+      border-radius:50%;
+      background:${fill};
+      border:${border}px solid #0F2A44;
+      box-shadow:0 1px 6px rgba(15,42,68,0.25);
+    "></div>`,
+    iconSize:    [size, size],
+    iconAnchor:  [size / 2, size / 2],
+    popupAnchor: [0, -(size / 2 + 4)],
+  });
+}
+
+const markers = [];
+
+stops.forEach((stop, i) => {
+  const type = i === 0 ? 'start' : i === stops.length - 1 ? 'end' : 'stop';
+  const marker = L.marker([stop.lat, stop.lng], { icon: makeIcon(type) })
+    .addTo(map)
+    .bindPopup(`
+      <div class="c4h-popup">
+        <div class="c4h-popup-country">${stop.country}</div>
+        <div class="c4h-popup-name">${stop.name}</div>
+        <div class="c4h-popup-desc">${stop.desc}</div>
+      </div>
+    `, { maxWidth: 220, closeButton: false });
+
+  markers.push(marker);
+});
+
+const list = document.getElementById('c4h-stops-list');
+
+stops.forEach((stop, i) => {
+  const isStart = i === 0;
+  const isEnd   = i === stops.length - 1;
+  const pill = document.createElement('button');
+  pill.className = 'c4h-map-stop-pill' +
+    (isStart ? ' is-start' : '') +
+    (isEnd   ? ' is-end'   : '');
+  pill.innerHTML = `<span class="c4h-stop-dot"></span>${stop.name}`;
+  pill.title = stop.country;
+  pill.addEventListener('click', () => {
+    map.setView([stop.lat, stop.lng], 7, { animate: true });
+    markers[i].openPopup();
+  });
+  list.appendChild(pill);
+});
+
+map.fitBounds(L.latLngBounds(latlngs).pad(0.06));
+</script>
+</body>
+</html>

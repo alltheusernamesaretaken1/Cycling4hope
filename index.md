@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: Project Presentation
       link: /presentation
+    - theme: alt
+      text: One-pager
+      link: /onepager
 features:
   - title: Humanitarian initiative
     details: An independent initiative to support education in Syria.

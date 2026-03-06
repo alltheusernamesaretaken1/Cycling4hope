@@ -8,6 +8,9 @@ import AboutPage from './components/AboutPage.vue'
 import ContactPage from './components/ContactPage.vue'
 import MediaPage from './components/MediaPage.vue'
 import PresentationPage from './components/PresentationPage.vue'
+import OnePagerPage from './components/OnePagerPage.vue'
+import RouteMap from './components/RouteMap.vue'
+import MiniRouteMap from './components/MiniRouteMap.vue'
 
 export default {
   extends: DefaultTheme,
@@ -20,5 +23,8 @@ export default {
     app.component('ContactPage', ContactPage)
     app.component('MediaPage', MediaPage)
     app.component('PresentationPage', PresentationPage)
+    app.component('OnePagerPage', OnePagerPage)
+    app.component('RouteMap', RouteMap)
+    app.component('MiniRouteMap', MiniRouteMap)
   }
 }

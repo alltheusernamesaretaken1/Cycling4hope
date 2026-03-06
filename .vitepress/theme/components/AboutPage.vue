@@ -167,59 +167,9 @@ const t = computed(() => {
     </section>
 
     <!-- ── Route ── -->
-    <section class="c4h-about-section c4h-about-route-section">
-      <h2>{{ t.routeHeading }}</h2>
-      <div class="c4h-about-route-layout">
-        <div class="c4h-about-route-img-wrap">
-          <img
-            src="/assets/page_about_the_project/route_artistic.png"
-            alt="Route map"
-            class="c4h-about-route-img"
-          />
-        </div>
-        <div class="c4h-about-route-stats">
-          <div class="c4h-about-route-stat">
-            <div class="c4h-about-route-stat-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/>
-                <circle cx="15" cy="5" r="1"/>
-                <path d="M12 17.5V14l-3-3 4-3 2 3h2"/>
-              </svg>
-            </div>
-            <div>
-              <h4>{{ t.routeStat1Label }}</h4>
-              <p>{{ t.routeStat1Value }}</p>
-            </div>
-          </div>
-          <div class="c4h-about-route-stat">
-            <div class="c4h-about-route-stat-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="6" cy="19" r="3"/>
-                <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
-                <circle cx="18" cy="5" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <h4>{{ t.routeStat2Label }}</h4>
-              <p>{{ t.routeStat2Value }}</p>
-            </div>
-          </div>
-          <div class="c4h-about-route-stat">
-            <div class="c4h-about-route-stat-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
-                <line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/>
-                <line x1="3" x2="21" y1="10" y2="10"/>
-              </svg>
-            </div>
-            <div>
-              <h4>{{ t.routeStat3Label }}</h4>
-              <p>{{ t.routeStat3Value }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <ClientOnly>
+      <RouteMap />
+    </ClientOnly>
 
     <!-- ── Goals ── -->
     <section class="c4h-about-section c4h-about-goals">
