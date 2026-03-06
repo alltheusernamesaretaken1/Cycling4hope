@@ -2568,6 +2568,10 @@ html[dir="rtl"] .c4h-pres-vision-list {
   color: var(--c4h-primary);
 }
 
+.dark .c4h-op-section-heading {
+  color: var(--c4h-secondary);
+}
+
 .c4h-op-section {
   display: flex;
   flex-direction: column;

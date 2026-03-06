@@ -22,7 +22,8 @@ export default defineConfig({
           { text: 'About the project', link: '/about' },
           { text: 'Timeline', link: '/timeline' },
           { text: 'Media', link: '/media' },
-          { text: 'Contact', link: '/contact' }
+          { text: 'Contact', link: '/contact' },
+          { text: 'One-pager', link: '/onepager' }
         ]
       }
     },
@@ -35,7 +36,8 @@ export default defineConfig({
           { text: 'Om prosjektet', link: '/no/om-prosjektet' },
           { text: 'Tidslinje', link: '/no/timeline' },
           { text: 'Presse', link: '/no/media' },
-          { text: 'Kontakt', link: '/no/kontakt' }
+          { text: 'Kontakt', link: '/no/kontakt' },
+          { text: 'One-pager', link: '/no/onepager' }
         ]
       }
     },
@@ -49,7 +51,8 @@ export default defineConfig({
           { text: 'عن المشروع', link: '/ar/about' },
           { text: 'الخط الزمني', link: '/ar/timeline' },
           { text: 'الإعلام', link: '/ar/media' },
-          { text: 'اتصل بنا', link: '/ar/contact' }
+          { text: 'اتصل بنا', link: '/ar/contact' },
+          { text: 'ملخص المشروع', link: '/ar/onepager' }
         ]
       }
     }
