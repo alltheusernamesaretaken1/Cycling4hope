@@ -105,6 +105,11 @@ onMounted(async () => {
   })
 
   mapInstance.fitBounds(L.latLngBounds(latlngs).pad(0.06))
+
+  // Prevent Leaflet zoom buttons (href="#") from scrolling page to top
+  mapEl.value.querySelectorAll('.leaflet-control-zoom a').forEach(a => {
+    a.href = 'javascript:void(0)'
+  })
 })
 
 onUnmounted(() => {
