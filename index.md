@@ -13,9 +13,6 @@ hero:
       text: Contact
       link: /contact
     - theme: alt
-      text: Project Presentation
-      link: /presentation
-    - theme: alt
       text: One-pager
       link: /onepager
 features:

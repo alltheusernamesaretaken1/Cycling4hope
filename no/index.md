@@ -13,9 +13,6 @@ hero:
       text: Kontakt
       link: /no/kontakt
     - theme: alt
-      text: Prosjektpresentasjon
-      link: /no/presentasjon
-    - theme: alt
       text: One-pager
       link: /no/onepager
 features:

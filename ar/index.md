@@ -13,9 +13,6 @@ hero:
       text: اتصل بنا
       link: /ar/contact
     - theme: alt
-      text: عرض المشروع
-      link: /ar/presentation
-    - theme: alt
       text: ملخص المشروع
       link: /ar/onepager
 features:

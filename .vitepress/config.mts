@@ -67,7 +67,8 @@ export default defineConfig({
     },
 
     socialLinks: [
-      //{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'youtube', link: 'https://youtube.com/@eastwest-0?si=QyYIbhFK4JzJD6UH' },
+      { icon: 'instagram', link: 'https://www.instagram.com/westerners.arabic' }
     ]
   },
 })
