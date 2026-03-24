@@ -68,7 +68,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'youtube', link: 'https://youtube.com/@eastwest-0?si=QyYIbhFK4JzJD6UH' },
-      { icon: 'instagram', link: 'https://www.instagram.com/westerners.arabic' }
+      { icon: 'instagram', link: 'https://www.instagram.com/alaa_sami8/' }
     ]
   },
 })
