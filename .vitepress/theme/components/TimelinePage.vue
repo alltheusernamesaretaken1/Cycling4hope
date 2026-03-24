@@ -24,8 +24,8 @@ const copy = computed(() => {
         'The ride from Oslo to Damascus. We cycle through Europe and the Middle East to build awareness and support.',
       p3Text:
         'Impact reporting, documentation, and follow-up of supported education initiatives for long-term sustainability.',
-      p1Date: 'January - March 2026',
-      p2Date: 'May - August 2026',
+      p1Date: 'March - April 2026',
+      p2Date: 'May - July 2026',
       p3Date: 'September - December 2026'
     }
   }
@@ -49,8 +49,8 @@ const copy = computed(() => {
         'الرحلة من أوسلو إلى دمشق عبر أوروبا والشرق الأوسط لزيادة الوعي وحشد الدعم.',
       p3Text:
         'تقارير النتائج وتوثيق الأثر والمتابعة المباشرة لمبادرات التعليم لضمان الاستدامة.',
-      p1Date: 'يناير - مارس 2026',
-      p2Date: 'مايو - أغسطس 2026',
+      p1Date: 'مارس - أبريل 2026',
+      p2Date: 'مايو - يوليو 2026',
       p3Date: 'سبتمبر - ديسمبر 2026'
     }
   }
@@ -73,8 +73,8 @@ const copy = computed(() => {
       'Selve reisen fra Oslo til Damaskus. Vi sykler gjennom Europa og Midtøsten for å bygge engasjement og samle støtte.',
     p3Text:
       'Rapportering av resultater, dokumentasjon av effekt og oppfølging av støttede utdanningsinitiativer.',
-    p1Date: 'Januar - Mars 2026',
-    p2Date: 'Mai - August 2026',
+    p1Date: 'Mars - April 2026',
+    p2Date: 'Mai - Juli 2026',
     p3Date: 'September - Desember 2026'
   }
 })
