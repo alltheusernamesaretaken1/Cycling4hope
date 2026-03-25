@@ -21,7 +21,7 @@ const ui = computed(() => {
 const t = computed(() => {
   if (lang.value === "ar") {
     return {
-      badge: "مبادرة إنسانية 2025",
+      badge: "مبادرة إنسانية 2026",
       title: "على الدراجة من أوسلو إلى دمشق",
       titleAccent: "دعم التعليم والأمل",
       tagline:
@@ -83,7 +83,7 @@ const t = computed(() => {
   }
   if (lang.value === "no-NO") {
     return {
-      badge: "Humanitært initiativ 2025",
+      badge: "Humanitært initiativ 2026",
       title: "Sykling fra Oslo til Damaskus",
       titleAccent: "Støtte utdanning og håp",
       tagline:
@@ -148,7 +148,7 @@ const t = computed(() => {
     };
   }
   return {
-    badge: "Humanitarian Initiative 2025",
+    badge: "Humanitarian Initiative 2026",
     title: "Cycling from Oslo to Damascus",
     titleAccent: "Supporting Education and Hope",
     tagline:
