@@ -7,6 +7,9 @@ hero:
   tagline: مبادرة إنسانية على الدراجة لدعم التعليم وإعادة تأهيل المدارس في سوريا.
   actions:
     - theme: brand
+      text: تبرع
+      link: https://molhamteam.com/campaigns/905
+    - theme: alt
       text: عن المشروع
       link: /ar/about
     - theme: alt

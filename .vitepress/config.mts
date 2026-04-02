@@ -19,11 +19,11 @@ export default defineConfig({
       lang: 'en-US',
       themeConfig: {
         nav: [
+          { text: 'Donate', link: 'https://molhamteam.com/en/campaigns/905' },
           { text: 'About the project', link: '/about' },
           { text: 'Timeline', link: '/timeline' },
           { text: 'Media', link: '/media' },
-          { text: 'Contact', link: '/contact' },
-          { text: 'One-pager', link: '/onepager' }
+          { text: 'Contact', link: '/contact' }
         ]
       }
     },
@@ -33,11 +33,11 @@ export default defineConfig({
       link: '/no/',
       themeConfig: {
         nav: [
+          { text: 'Doner', link: 'https://molhamteam.com/campaigns/905' },
           { text: 'Om prosjektet', link: '/no/om-prosjektet' },
           { text: 'Tidslinje', link: '/no/timeline' },
           { text: 'Presse', link: '/no/media' },
-          { text: 'Kontakt', link: '/no/kontakt' },
-          { text: 'One-pager', link: '/no/onepager' }
+          { text: 'Kontakt', link: '/no/kontakt' }
         ]
       }
     },
@@ -48,11 +48,11 @@ export default defineConfig({
       link: '/ar/',
       themeConfig: {
         nav: [
+          { text: 'تبرع', link: 'https://molhamteam.com/campaigns/905' },
           { text: 'عن المشروع', link: '/ar/about' },
           { text: 'الخط الزمني', link: '/ar/timeline' },
           { text: 'الإعلام', link: '/ar/media' },
-          { text: 'اتصل بنا', link: '/ar/contact' },
-          { text: 'ملخص المشروع', link: '/ar/onepager' }
+          { text: 'اتصل بنا', link: '/ar/contact' }
         ]
       }
     }

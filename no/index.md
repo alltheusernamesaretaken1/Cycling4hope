@@ -7,6 +7,9 @@ hero:
   tagline: Et humanitært sykkelinitiativ som støtter utdanning og skoleprosjekter i Syria.
   actions:
     - theme: brand
+      text: Doner
+      link: https://molhamteam.com/campaigns/905
+    - theme: alt
       text: Om prosjektet
       link: /no/om-prosjektet
     - theme: alt

@@ -7,6 +7,9 @@ hero:
   tagline: A humanitarian cycling initiative supporting education and school projects in Syria.
   actions:
     - theme: brand
+      text: Donate
+      link: https://molhamteam.com/en/campaigns/905
+    - theme: alt
       text: About
       link: /about
     - theme: alt
