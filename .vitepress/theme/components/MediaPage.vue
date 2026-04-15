@@ -43,6 +43,18 @@ const ui = computed(() => {
 
 const norwegianItems = [
   {
+    source: 'Banett',
+    sourceFull: 'Brønnøysunds Avis',
+    domain: 'banett.no',
+    type: 'Nyheter',
+    date: '2. april 2026',
+    title: 'Sykler for håp',
+    desc: 'Alaa Same Akasha (32) fra Oslo legger ut på en tre måneder lang sykkeltur til Damaskus for å samle inn midler til rehabilitering av skoler i Syria.',
+    url: 'https://www.banett.no/nyheter/n/QJJ4lq/sykler-for-haap',
+    linkKey: 'readMore',
+    image: '/assets/page_media/banett_sykler_for_haap.png',
+  },
+  {
     source: 'BT',
     sourceFull: 'Bergens Tidende',
     domain: 'bt.no',

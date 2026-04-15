@@ -15,9 +15,6 @@ hero:
     - theme: alt
       text: Contact
       link: /contact
-    - theme: alt
-      text: One-pager
-      link: /onepager
 features:
   - title: Humanitarian initiative
     details: An independent initiative to support education in Syria.

@@ -61,8 +61,15 @@ const t = computed(() => {
       visionBoxLabel: "الهدف النهائي",
       visionBoxBody:
         "الهدف هو ضمان حصول الأطفال على تعليم آمن ومستقر – شرط أساسي لإعادة الإعمار والتنمية المجتمعية والسلام الدائم.",
-      timelineBtn: "عرض الخط الزمني →",
-      timelineLink: "/ar/timeline",
+      timelineTitle: "الخط الزمني",
+      timelineIntro: "من التخطيط إلى التنفيذ – ثلاث مراحل تضمن الشفافية والمساءلة وأثراً إنسانياً حقيقياً على أرض الواقع.",
+      phaseLabel1: "المرحلة 01", phaseLabel2: "المرحلة 02", phaseLabel3: "المرحلة 03",
+      phase1: "التخطيط والشراكات", phase2: "رحلة الدراجات", phase3: "المتابعة والتنفيذ",
+      statusDone: "مكتمل", statusActive: "قيد التنفيذ", statusPlanned: "مخطط",
+      p1Text: "تشمل التحضيرات تخطيط المسار والشراكات وجمع التبرعات واللوجستيات لضمان تنفيذ آمن وفعال.",
+      p2Text: "الرحلة من أوسلو إلى دمشق عبر أوروبا والشرق الأوسط لزيادة الوعي وحشد الدعم.",
+      p3Text: "تقارير النتائج وتوثيق الأثر والمتابعة المباشرة لمبادرات التعليم لضمان الاستدامة.",
+      p1Date: "مارس – أبريل 2026", p2Date: "مايو – يوليو 2026", p3Date: "سبتمبر – ديسمبر 2026",
       routeHeading: "المسار",
       routeStat1Label: "رحلة دراجة طويلة المدى",
       routeStat1Value: "جولة عبر أوروبا",
@@ -128,8 +135,15 @@ const t = computed(() => {
       visionBoxLabel: "Langsiktig mål",
       visionBoxBody:
         "Målet er å sikre at barn får tilgang til trygg og stabil skolegang – en forutsetning for gjenoppbygging, samfunnsutvikling og varig fred.",
-      timelineBtn: "Se tidslinje →",
-      timelineLink: "/no/timeline",
+      timelineTitle: "Tidslinje",
+      timelineIntro: "Fra planlegging til gjennomføring – tre faser som sikrer åpenhet, ansvarlig bruk av midler og varig humanitær effekt.",
+      phaseLabel1: "Fase 01", phaseLabel2: "Fase 02", phaseLabel3: "Fase 03",
+      phase1: "Planlegging og partnerskap", phase2: "Sykkelreisen", phase3: "Oppfølging og implementering",
+      statusDone: "Fullført", statusActive: "Pågår", statusPlanned: "Planlagt",
+      p1Text: "Omfattende forberedelser med ruteplanlegging, partnerskap, innsamling og logistikk for trygg og effektiv gjennomføring.",
+      p2Text: "Selve reisen fra Oslo til Damaskus. Vi sykler gjennom Europa og Midtøsten for å bygge engasjement og samle støtte.",
+      p3Text: "Rapportering av resultater, dokumentasjon av effekt og oppfølging av støttede utdanningsinitiativer.",
+      p1Date: "Mars – April 2026", p2Date: "Mai – Juli 2026", p3Date: "September – Desember 2026",
       routeHeading: "Rute",
       routeStat1Label: "Langdistanse sykkeltur",
       routeStat1Value: "Sykkeltur på tvers av Europa",
@@ -196,8 +210,15 @@ const t = computed(() => {
     visionBoxLabel: "Long-term goal",
     visionBoxBody:
       "The goal is to ensure that children have access to safe and stable schooling – a prerequisite for reconstruction, societal development and lasting peace.",
-    timelineBtn: "View timeline →",
-    timelineLink: "/timeline",
+    timelineTitle: "Timeline",
+    timelineIntro: "From planning to delivery — three phases that keep the project transparent, accountable, and grounded in real impact.",
+    phaseLabel1: "Phase 01", phaseLabel2: "Phase 02", phaseLabel3: "Phase 03",
+    phase1: "Planning and Partnerships", phase2: "Cycling Journey", phase3: "Follow-up and Implementation",
+    statusDone: "Completed", statusActive: "Active", statusPlanned: "Planned",
+    p1Text: "Preparation includes route planning, partnerships, fundraising, and logistics to ensure safe and effective execution.",
+    p2Text: "The ride from Oslo to Damascus. We cycle through Europe and the Middle East to build awareness and support.",
+    p3Text: "Impact reporting, documentation, and follow-up of supported education initiatives for long-term sustainability.",
+    p1Date: "March – April 2026", p2Date: "May – July 2026", p3Date: "September – December 2026",
     routeHeading: "Route",
     routeStat1Label: "Long-distance cycling",
     routeStat1Value: "A cross-European cycling journey",
@@ -236,9 +257,6 @@ const t = computed(() => {
           <p>{{ t.bgP2 }}</p>
           <p>{{ t.bgP3 }}</p>
           <p>{{ t.bgP4 }}</p>
-          <a :href="t.timelineLink" class="c4h-about-timeline-btn">{{
-            t.timelineBtn
-          }}</a>
         </div>
         <div class="c4h-about-bg-logo-wrap">
           <img
@@ -250,6 +268,62 @@ const t = computed(() => {
             alt="Cycling4hope"
             class="c4h-about-bg-logo"
           />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Timeline ── -->
+    <section class="c4h-about-section c4h-about-timeline-section">
+      <h2>{{ t.timelineTitle }}</h2>
+      <p class="c4h-about-timeline-intro">{{ t.timelineIntro }}</p>
+      <div class="c4h-tl-wrap">
+        <div class="c4h-tl-content">
+          <div class="c4h-tl-line" aria-hidden="true"></div>
+
+          <article class="c4h-tl-item">
+            <div class="c4h-tl-marker" aria-hidden="true"><span>✓</span></div>
+            <div class="c4h-tl-card">
+              <div class="c4h-tl-card-head">
+                <div>
+                  <span class="c4h-tl-phase-id">{{ t.phaseLabel1 }}</span>
+                  <h3>{{ t.phase1 }}</h3>
+                </div>
+                <span class="c4h-tl-status">{{ t.statusDone }}</span>
+              </div>
+              <p class="c4h-tl-text">{{ t.p1Text }}</p>
+              <p class="c4h-tl-date">{{ t.p1Date }}</p>
+            </div>
+          </article>
+
+          <article class="c4h-tl-item c4h-tl-item-active">
+            <div class="c4h-tl-marker" aria-hidden="true"><span>🚴</span></div>
+            <div class="c4h-tl-card">
+              <div class="c4h-tl-card-head">
+                <div>
+                  <span class="c4h-tl-phase-id">{{ t.phaseLabel2 }}</span>
+                  <h3>{{ t.phase2 }}</h3>
+                </div>
+                <span class="c4h-tl-status c4h-tl-status-active">{{ t.statusActive }}</span>
+              </div>
+              <p class="c4h-tl-text">{{ t.p2Text }}</p>
+              <p class="c4h-tl-date">{{ t.p2Date }}</p>
+            </div>
+          </article>
+
+          <article class="c4h-tl-item">
+            <div class="c4h-tl-marker c4h-tl-marker-soft" aria-hidden="true"><span>○</span></div>
+            <div class="c4h-tl-card c4h-tl-card-soft">
+              <div class="c4h-tl-card-head">
+                <div>
+                  <span class="c4h-tl-phase-id">{{ t.phaseLabel3 }}</span>
+                  <h3>{{ t.phase3 }}</h3>
+                </div>
+                <span class="c4h-tl-status">{{ t.statusPlanned }}</span>
+              </div>
+              <p class="c4h-tl-text">{{ t.p3Text }}</p>
+              <p class="c4h-tl-date">{{ t.p3Date }}</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>

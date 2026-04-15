@@ -878,6 +878,20 @@ html[dir="rtl"] .c4h-tl-content {
   gap: 20px;
 }
 
+/* Timeline embedded in About page */
+.c4h-about-timeline-section .c4h-tl-line {
+  display: none !important;
+}
+.c4h-about-timeline-section .c4h-tl-content {
+  padding-left: 0 !important;
+}
+html[dir="rtl"] .c4h-about-timeline-section .c4h-tl-content {
+  padding-right: 0 !important;
+}
+.c4h-about-timeline-intro {
+  margin-bottom: 36px !important;
+}
+
 .c4h-about-timeline-btn {
   display: inline-flex;
   align-items: center;

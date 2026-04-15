@@ -15,9 +15,6 @@ hero:
     - theme: alt
       text: Kontakt
       link: /no/kontakt
-    - theme: alt
-      text: One-pager
-      link: /no/onepager
 features:
   - title: Humanitært initiativ
     details: Et uavhengig initiativ for å støtte utdanning i Syria.
