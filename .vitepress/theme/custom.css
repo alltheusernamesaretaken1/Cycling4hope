@@ -471,6 +471,13 @@ body {
   text-align: center;
 }
 
+.c4h-sponsors-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
 .c4h-sponsors-heading {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 900;
@@ -483,8 +490,9 @@ body {
   font-size: 1rem;
   color: var(--c4h-text-body);
   max-width: 560px;
-  margin: 0 auto 48px;
+  margin: 0;
   line-height: 1.65;
+  text-align: center;
 }
 
 .c4h-sponsors-grid {
@@ -543,7 +551,7 @@ body {
   display: inline-block;
   padding: 10px 22px;
   background: var(--c4h-primary);
-  color: #fff;
+  color: #fff !important;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -554,7 +562,7 @@ body {
 
 .c4h-sponsors-btn:hover {
   opacity: 0.85;
-  color: #fff;
+  color: #fff !important;
 }
 
 /* ========================================
@@ -628,9 +636,13 @@ body {
   margin-bottom: 14px;
 }
 
-.dark .c4h-stat-card {
+.dark .c4h-stat-card,
+.dark .c4h-sponsors-card {
   background: #F1E6CF;
 }
+
+.dark .c4h-sponsors-card .c4h-sponsors-name { color: #0F2A44; }
+.dark .c4h-sponsors-card .c4h-sponsors-desc { color: #2B2B2B; }
 .dark .c4h-stat-card strong { color: #0F2A44; }
 .dark .c4h-stat-card p      { color: #2B2B2B; }
 
@@ -1553,6 +1565,33 @@ html[dir="rtl"] .c4h-about-vision-list li::before {
   min-height: 80px;
 }
 
+@media (max-width: 640px) {
+  .c4h-why-school-images {
+    flex: none;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .c4h-why-school-images .c4h-why-gallery-img {
+    height: auto;
+    min-height: unset;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .c4h-why-caption {
+    position: static !important;
+    display: block !important;
+    margin-top: 8px !important;
+  }
+
+  .c4h-why-closing h2 {
+    clear: both;
+    margin-top: 32px;
+  }
+}
+
 .c4h-why-geo-label {
   display: block;
   font-size: 11px;
@@ -1633,6 +1672,14 @@ html[dir="rtl"] .c4h-about-vision-list li::before {
 
 .dark .c4h-why-school-row dt {
   color: var(--c4h-secondary);
+}
+
+.dark .c4h-why-school-row {
+  border-bottom-color: rgba(241, 230, 207, 0.2);
+}
+
+.dark .c4h-why-school-row:first-child {
+  border-top-color: rgba(241, 230, 207, 0.2);
 }
 
 .c4h-why-school-row dd {

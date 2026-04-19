@@ -61,6 +61,8 @@ const t = computed(() => {
       visionBoxLabel: "الهدف النهائي",
       visionBoxBody:
         "الهدف هو ضمان حصول الأطفال على تعليم آمن ومستقر – شرط أساسي لإعادة الإعمار والتنمية المجتمعية والسلام الدائم.",
+      causeBtn: "اقرأ عن أزمة التعليم →",
+      causeLink: "/why",
       timelineTitle: "الخط الزمني",
       timelineIntro: "من التخطيط إلى التنفيذ – ثلاث مراحل تضمن الشفافية والمساءلة وأثراً إنسانياً حقيقياً على أرض الواقع.",
       phaseLabel1: "المرحلة 01", phaseLabel2: "المرحلة 02", phaseLabel3: "المرحلة 03",
@@ -135,6 +137,8 @@ const t = computed(() => {
       visionBoxLabel: "Langsiktig mål",
       visionBoxBody:
         "Målet er å sikre at barn får tilgang til trygg og stabil skolegang – en forutsetning for gjenoppbygging, samfunnsutvikling og varig fred.",
+      causeBtn: "Les om utdanningskrisen →",
+      causeLink: "/why",
       timelineTitle: "Tidslinje",
       timelineIntro: "Fra planlegging til gjennomføring – tre faser som sikrer åpenhet, ansvarlig bruk av midler og varig humanitær effekt.",
       phaseLabel1: "Fase 01", phaseLabel2: "Fase 02", phaseLabel3: "Fase 03",
@@ -210,6 +214,8 @@ const t = computed(() => {
     visionBoxLabel: "Long-term goal",
     visionBoxBody:
       "The goal is to ensure that children have access to safe and stable schooling – a prerequisite for reconstruction, societal development and lasting peace.",
+    causeBtn: "Read about the education crisis →",
+    causeLink: "/why",
     timelineTitle: "Timeline",
     timelineIntro: "From planning to delivery — three phases that keep the project transparent, accountable, and grounded in real impact.",
     phaseLabel1: "Phase 01", phaseLabel2: "Phase 02", phaseLabel3: "Phase 03",
@@ -257,6 +263,7 @@ const t = computed(() => {
           <p>{{ t.bgP2 }}</p>
           <p>{{ t.bgP3 }}</p>
           <p>{{ t.bgP4 }}</p>
+          <a :href="t.causeLink" class="c4h-about-timeline-btn">{{ t.causeBtn }}</a>
         </div>
         <div class="c4h-about-bg-logo-wrap">
           <img

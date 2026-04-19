@@ -9,20 +9,20 @@ const t = computed(() => {
     return {
       heading: 'شركاء الدعم',
       sub: 'يتشرف المشروع بدعم شركاء متميزين يؤمنون بأهمية هذه المبادرة.',
-      visitBtn: 'زيارة الموقع ↗',
+      visitBtn: 'زيارة الموقع →',
     }
   }
   if (lang.value === 'no-NO') {
     return {
       heading: 'Samarbeidspartnere',
       sub: 'Prosjektet støttes av partnere som tror på initiativet og bidrar til at reisen kan gjennomføres.',
-      visitBtn: 'Besøk nettsiden ↗',
+      visitBtn: 'Besøk nettsiden →',
     }
   }
   return {
     heading: 'Sponsors',
     sub: 'The project is supported by partners who believe in the initiative and help make the journey possible.',
-    visitBtn: 'Visit website ↗',
+    visitBtn: 'Visit website →',
   }
 })
 
@@ -53,8 +53,10 @@ const sponsors = [
 <template>
   <section class="c4h-sponsors">
     <div class="c4h-sponsors-inner">
-      <h2 class="c4h-sponsors-heading">{{ t.heading }}</h2>
-      <p class="c4h-sponsors-sub">{{ t.sub }}</p>
+      <div class="c4h-sponsors-header">
+        <h2 class="c4h-sponsors-heading">{{ t.heading }}</h2>
+        <p class="c4h-sponsors-sub">{{ t.sub }}</p>
+      </div>
       <div class="c4h-sponsors-grid">
         <div v-for="s in sponsors" :key="s.name" class="c4h-sponsors-card">
           <div class="c4h-sponsors-logo-wrap">
