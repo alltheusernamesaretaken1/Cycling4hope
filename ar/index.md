@@ -24,4 +24,6 @@ features:
     details: خطة واضحة للتبرعات والشراكات والتقارير.
 ---
 
+<SponsorsSection />
+
 <HvorforSection />

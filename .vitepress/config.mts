@@ -21,6 +21,7 @@ export default defineConfig({
         nav: [
           { text: 'Donate', link: 'https://molhamteam.com/en/campaigns/905' },
           { text: 'About the project', link: '/about' },
+          { text: 'The Cause', link: '/why' },
           { text: 'Media', link: '/media' },
           { text: 'Contact', link: '/contact' }
         ]

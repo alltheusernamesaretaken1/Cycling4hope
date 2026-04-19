@@ -24,4 +24,6 @@ features:
     details: Tydelig plan for innsamling, samarbeid og rapportering.
 ---
 
+<SponsorsSection />
+
 <HvorforSection />

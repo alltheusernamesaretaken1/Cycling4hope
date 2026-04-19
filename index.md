@@ -24,5 +24,7 @@ features:
     details: A clear plan for fundraising, partnerships, and reporting.
 ---
 
+<SponsorsSection />
+
 <HvorforSection />
                                                                                                                 

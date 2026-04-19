@@ -11,6 +11,8 @@ import PresentationPage from './components/PresentationPage.vue'
 import OnePagerPage from './components/OnePagerPage.vue'
 import RouteMap from './components/RouteMap.vue'
 import MiniRouteMap from './components/MiniRouteMap.vue'
+import SponsorsSection from './components/SponsorsSection.vue'
+import WhyPage from './components/WhyPage.vue'
 
 export default {
   extends: DefaultTheme,
@@ -26,5 +28,7 @@ export default {
     app.component('OnePagerPage', OnePagerPage)
     app.component('RouteMap', RouteMap)
     app.component('MiniRouteMap', MiniRouteMap)
+    app.component('SponsorsSection', SponsorsSection)
+    app.component('WhyPage', WhyPage)
   }
 }
