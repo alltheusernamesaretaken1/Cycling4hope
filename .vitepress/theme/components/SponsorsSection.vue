@@ -64,7 +64,7 @@ const sponsors = [
           </div>
           <div class="c4h-sponsors-body">
             <h3 class="c4h-sponsors-name">{{ s.name }}</h3>
-            <p class="c4h-sponsors-desc">{{ s.desc[lang.value] ?? s.desc['en-US'] }}</p>
+            <p class="c4h-sponsors-desc">{{ s.desc[lang] ?? s.desc['en-US'] }}</p>
             <a :href="s.url" target="_blank" rel="noopener noreferrer" class="c4h-sponsors-btn">{{ t.visitBtn }}</a>
           </div>
         </div>

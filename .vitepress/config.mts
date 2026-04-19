@@ -35,6 +35,7 @@ export default defineConfig({
         nav: [
           { text: 'Doner', link: 'https://molhamteam.com/campaigns/905' },
           { text: 'Om prosjektet', link: '/no/om-prosjektet' },
+          { text: 'Hvorfor Syria', link: '/no/hvorfor' },
           { text: 'Presse', link: '/no/media' },
           { text: 'Kontakt', link: '/no/kontakt' }
         ]
@@ -49,6 +50,7 @@ export default defineConfig({
         nav: [
           { text: 'تبرع', link: 'https://molhamteam.com/campaigns/905' },
           { text: 'عن المشروع', link: '/ar/about' },
+          { text: 'لماذا سوريا', link: '/ar/why' },
           { text: 'الإعلام', link: '/ar/media' },
           { text: 'اتصل بنا', link: '/ar/contact' }
         ]
