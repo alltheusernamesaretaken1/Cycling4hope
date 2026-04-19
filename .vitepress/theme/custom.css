@@ -1465,7 +1465,6 @@ html[dir="rtl"] .c4h-about-vision-list li::before {
 
 .c4h-why-section {
   padding: 48px 0;
-  border-top: 1px solid var(--c4h-border);
 }
 
 .c4h-why-no-border {
@@ -1659,11 +1658,9 @@ html[dir="rtl"] .c4h-about-vision-list li::before {
   grid-template-columns: 130px 1fr;
   gap: 12px;
   padding: 14px 0;
-  border-bottom: 1px solid var(--c4h-border);
 }
 
 .c4h-why-school-row:first-child {
-  border-top: 1px solid var(--c4h-border);
 }
 
 .c4h-why-school-row dt {
@@ -1679,13 +1676,6 @@ html[dir="rtl"] .c4h-about-vision-list li::before {
   color: var(--c4h-secondary);
 }
 
-.dark .c4h-why-school-row {
-  border-bottom-color: rgba(241, 230, 207, 0.2);
-}
-
-.dark .c4h-why-school-row:first-child {
-  border-top-color: rgba(241, 230, 207, 0.2);
-}
 
 .c4h-why-school-row dd {
   font-size: 0.95rem;
