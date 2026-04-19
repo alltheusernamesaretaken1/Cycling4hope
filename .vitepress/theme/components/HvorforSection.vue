@@ -20,6 +20,8 @@ const t = computed(() => {
       desc: 'يجمع هذا المشروع بين رحلة جسدية وهدف إنساني واضح – لخلق الوعي والحوار والدعم الملموس للتعليم.',
       sources: 'المصادر: UNICEF، NRC، ReliefWeb',
       imgAlt: 'أطفال سوريون في الفصل الدراسي',
+      causeBtn: 'اقرأ عن أزمة التعليم →',
+      causeLink: '/ar/why',
     }
   }
   if (lang.value === 'en-US') {
@@ -37,6 +39,8 @@ const t = computed(() => {
       desc: 'This project combines a physical journey with a clear humanitarian purpose – to create visibility, dialogue, and concrete support for education.',
       sources: 'Sources: UNICEF, NRC, ReliefWeb',
       imgAlt: 'Syrian children in a classroom',
+      causeBtn: 'Read about the education crisis →',
+      causeLink: '/why',
     }
   }
   return {
@@ -53,6 +57,8 @@ const t = computed(() => {
     desc: 'Dette prosjektet kombinerer en fysisk reise med et tydelig humanitært formål – for å skape synlighet, dialog og konkret støtte til utdanning.',
     sources: 'Kilder: UNICEF, NRC, ReliefWeb',
     imgAlt: 'Syriske barn i klasserom',
+    causeBtn: 'Les om utdanningskrisen →',
+    causeLink: '/no/hvorfor',
   }
 })
 </script>
@@ -84,6 +90,7 @@ const t = computed(() => {
           </ul>
 
           <p class="c4h-hvorfor-desc">{{ t.desc }}</p>
+          <a :href="t.causeLink" class="c4h-sponsors-btn c4h-hvorfor-cause-btn">{{ t.causeBtn }}</a>
           <p class="c4h-hvorfor-sources"><em>{{ t.sources }}</em></p>
         </div>
 

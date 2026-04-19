@@ -680,6 +680,11 @@ body {
   margin: 0 0 16px;
 }
 
+.c4h-hvorfor-cause-btn {
+  display: inline-block;
+  margin: 8px 0 20px;
+}
+
 .c4h-hvorfor-sources {
   margin: 0;
   font-size: 0.9rem;
