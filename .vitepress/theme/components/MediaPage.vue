@@ -114,7 +114,6 @@ const internationalItems = [
     <!-- ── Hero ── -->
     <section class="c4h-media-hero">
       <h1>{{ ui.heading }}</h1>
-      <div class="c4h-media-hero-bar"></div>
       <p class="c4h-media-intro">{{ ui.intro }}</p>
     </section>
 
