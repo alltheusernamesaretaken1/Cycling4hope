@@ -47,6 +47,16 @@ const sponsors = [
       'ar':    "شركة أمان ألمانية بخبرة تمتد لقرن من الزمن. رائدة عالمياً في أقفال وخوذات الدراجات، وتحظى بثقة الدرّاجين في جميع أنحاء العالم لموثوقيتها وجودة تصنيعها.",
     },
   },
+  {
+    name: 'Ortlieb',
+    url: 'https://de.ortlieb.com/',
+    logo: '/assets/page_home/Sponsor Logo Ortlieb.png',
+    desc: {
+      'en-US': "German manufacturer of waterproof bags, built and designed in Germany since 1982. The global benchmark for touring panniers and bikepacking gear — trusted by long-distance cyclists for their durability, repairability, and all-weather reliability.",
+      'no-NO': "Tysk produsent av vanntette vesker, bygget og designet i Tyskland siden 1982. Den globale standarden for sykkelvesker og bikepacking-utstyr – betrodd av langdistansesyklister for holdbarhet, reparerbarhet og pålitelighet i all slags vær.",
+      'ar':    "شركة ألمانية لتصنيع الحقائب المقاومة للماء، تُصنَّع وتُصمَّم في ألمانيا منذ عام 1982. المرجع العالمي لحقائب التجوال وأدوات البايكباكينج — موثوقة من قِبل راكبي الدراجات على المسافات الطويلة لمتانتها وقابليتها للإصلاح وموثوقيتها في جميع الأحوال الجوية.",
+    },
+  },
 ]
 </script>
 
