@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
 
 const { lang } = useData()
@@ -18,6 +18,27 @@ const images = [
 ]
 
 const schoolImages = images.slice(0, 6)
+
+const lightbox = ref({ open: false, index: 0 })
+
+function openLightbox(i) {
+  lightbox.value = { open: true, index: i }
+}
+function closeLightbox() {
+  lightbox.value.open = false
+}
+function lbPrev() {
+  lightbox.value.index = (lightbox.value.index - 1 + schoolImages.length) % schoolImages.length
+}
+function lbNext() {
+  lightbox.value.index = (lightbox.value.index + 1) % schoolImages.length
+}
+function onKeydown(e) {
+  if (!lightbox.value.open) return
+  if (e.key === 'ArrowRight') lbNext()
+  if (e.key === 'ArrowLeft') lbPrev()
+  if (e.key === 'Escape') closeLightbox()
+}
 
 const t = computed(() => {
   if (lang.value === 'no-NO') {
@@ -124,7 +145,7 @@ const t = computed(() => {
 </script>
 
 <template>
-  <main class="c4h-why">
+  <main class="c4h-why" @keydown="onKeydown" tabindex="-1">
 
     <!-- ── Hero ── -->
     <section class="c4h-why-hero">
@@ -192,6 +213,7 @@ const t = computed(() => {
               alt="School photo"
               class="c4h-why-gallery-img"
               loading="lazy"
+              @click="openLightbox(i)"
             />
           </div>
           <p class="c4h-why-caption">{{ t.captionAfter }}</p>
@@ -205,6 +227,17 @@ const t = computed(() => {
       <h2>{{ t.rehabTitle }}</h2>
       <p>{{ t.rehabP }}</p>
     </section>
+
+    <!-- ── Lightbox ── -->
+    <Teleport to="body">
+      <div v-if="lightbox.open" class="c4h-lb-overlay" @click.self="closeLightbox">
+        <button class="c4h-lb-close" @click="closeLightbox" aria-label="Close">&#x2715;</button>
+        <button class="c4h-lb-arrow c4h-lb-prev" @click="lbPrev" aria-label="Previous">&#8249;</button>
+        <img :src="schoolImages[lightbox.index]" class="c4h-lb-img" alt="School photo" />
+        <button class="c4h-lb-arrow c4h-lb-next" @click="lbNext" aria-label="Next">&#8250;</button>
+        <div class="c4h-lb-counter">{{ lightbox.index + 1 }} / {{ schoolImages.length }}</div>
+      </div>
+    </Teleport>
 
   </main>
 </template>
